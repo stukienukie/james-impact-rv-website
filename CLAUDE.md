@@ -22,7 +22,7 @@
 
 ## Rules
 - Do not fabricate certifications, warranty work, or team size claims
-- All "years of experience" = 5 years
+- All "years of experience" = 12 years (5 years solo + dealership background before that)
 - Primary city = Kyle, TX (not Austin)
 - Lead CTA is always phone call or contact form
 - No emojis anywhere — use lucide-react icons

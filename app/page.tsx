@@ -117,7 +117,7 @@ const howItWorks = [
 
 const bulletPoints = [
   'Accounts with major parts suppliers',
-  'All major credit cards accepted',
+  'Cash & check accepted',
   'Fast sourcing',
   'No dealership runaround',
 ]
@@ -178,7 +178,7 @@ export default function HomePage() {
                 <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     James Langston, owner of IMPACT RV Repair, is a mobile RV technician
-                    based in Kyle, Texas. With 5 years of hands-on experience, he comes
+                    based in Kyle, Texas. With 12 years of hands-on experience — including dealership work — he comes
                     to your campsite, driveway, or storage lot — no hauling your rig to
                     a dealership.
                   </p>

@@ -42,7 +42,12 @@ const faqItems = [
   {
     question: 'What forms of payment do you accept?',
     answer:
-      'All major credit cards, plus check and cash. Pricing is provided up front before work begins.',
+      'Cash and check are preferred. Pricing is provided up front before work begins — no surprises.',
+  },
+  {
+    question: 'Do you accept service contracts or insurance claims?',
+    answer:
+      'Yes. James works with service contracts and can assist with insurance claims for covered repairs. Contact us to discuss your specific coverage before scheduling.',
   },
   {
     question: 'Do you offer upfront pricing?',

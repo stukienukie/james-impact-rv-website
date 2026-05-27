@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 const trustBadges = [
   { label: 'Fully Mobile Shop' },
-  { label: '5 Years in Business' },
+  { label: '12 Years Experience' },
   { label: '4.8 Google Rating' },
   { label: 'Emergencies First' },
 ]
