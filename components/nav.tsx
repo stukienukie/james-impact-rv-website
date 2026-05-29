@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/gallery', label: 'Gallery' },
   { href: '/service-area', label: 'Service Area' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]
 
