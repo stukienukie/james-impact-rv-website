@@ -4,11 +4,10 @@ import { motion, useReducedMotion } from 'motion/react'
 import { MapPin } from 'lucide-react'
 
 const cities = [
-  'Kyle', 'Buda', 'Austin', 'Round Rock',
-  'Cedar Park', 'Pflugerville', 'Georgetown', 'Leander',
-  'San Marcos', 'Lakeway', 'Bastrop', 'Hutto',
-  'Manor', 'Dripping Springs', 'Liberty Hill', 'Taylor',
-  'Elgin', 'Wimberley',
+  'Kyle', 'Buda', 'Austin', 'San Marcos',
+  'New Braunfels', 'Canyon Lake', 'Bastrop', 'Dripping Springs',
+  'Taylor', 'Elgin', 'Wimberley', 'Niederwald',
+  'Uhland',
 ]
 
 export function CityGrid() {
