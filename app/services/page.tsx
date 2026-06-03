@@ -17,9 +17,9 @@ import { ServiceCard } from '@/components/service-card'
 import { AnimateIn, StaggerGroup, StaggerItem } from '@/components/animate-in'
 
 export const metadata: Metadata = {
-  title: 'RV Repair Services - Electrical, Plumbing, A/C & More | Impact RV Repair',
+  title: 'Mobile RV Repair Services Kyle TX — AC, Roof, Electrical & More | Impact RV Repair',
   description:
-    'Mobile RV repair services near Kyle, TX - electrical, plumbing, A/C, roofs, appliances, custom installs, and more. We come to you. Call 512-968-5258.',
+    'Mobile RV repair services in Kyle TX and Hays County — AC repair, roof repair, electrical, plumbing, slide-outs, and more. We come to you anywhere in Central Texas. Call 512-968-5258.',
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
@@ -47,9 +47,9 @@ const services = [
   },
   {
     icon: <Thermometer className="h-7 w-7 text-primary" />,
-    title: 'A/C, Heat & Refrigeration',
+    title: 'RV AC Repair & HVAC',
     description:
-      'Rooftop A/C units, furnaces, refrigerators, and complete HVAC system swaps and maintenance.',
+      'RV AC repair near Kyle TX and across Central Texas — rooftop units, furnaces, refrigerators, and full HVAC swaps. Same-week service available.',
   },
   {
     icon: <Cog className="h-7 w-7 text-primary" />,
@@ -59,9 +59,9 @@ const services = [
   },
   {
     icon: <Shield className="h-7 w-7 text-primary" />,
-    title: 'Roof & Seal Inspection',
+    title: 'RV Roof Repair & Resealing',
     description:
-      'Roof recoats, sealant maintenance, leak prevention, and complete roof inspections to protect your investment.',
+      'RV roof repair near me — on-site roof recoats, leak repair, sealant maintenance, and full roof inspections across Kyle TX and Hays County.',
   },
   {
     icon: <ClipboardCheck className="h-7 w-7 text-primary" />,
@@ -91,9 +91,7 @@ export default function ServicesPage() {
               <span className="text-primary">at your location.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Looking for RV repair near me in Central Texas? One call covers it all - from
-              quick fixes to full custom builds. RV maintenance Central Texas families count on,
-              delivered to your door.
+              Mobile RV repair serving Kyle TX, Hays County, and all of Central Texas. One call covers it all — from AC repair and roof repair to electrical, plumbing, and full custom builds. We come to your driveway, campground, or storage lot.
             </p>
           </div>
         </section>

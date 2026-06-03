@@ -69,10 +69,10 @@ export default function ServiceAreaPage() {
                 <div className="prose prose-sm max-w-none text-muted-foreground leading-relaxed space-y-4">
                   <p>
                     James Langston is a mobile RV technician based in Kyle, Texas serving
-                    customers across a 50-mile radius. Whether you need RV repair in Buda TX,
-                    RV repair in San Marcos TX, or you&apos;re looking for a trusted RV
-                    technician in Austin, James brings the tools and expertise directly to
-                    your location.
+                    customers across a 50-mile radius throughout Hays County and Central Texas.
+                    Whether you need mobile RV repair in Buda TX, RV roof repair in San Marcos TX,
+                    RV AC repair near New Braunfels, or a trusted RV technician anywhere in
+                    the Austin area — James brings the tools and expertise directly to your location.
                   </p>
                   <p>
                     He services all RV types — Class A, B, and C motorhomes, travel trailers,
