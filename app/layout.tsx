@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     'travel trailer repair',
   ],
   authors: [{ name: 'IMPACT RV Repair' }],
+  verification: {
+    google: 'uOhpKKgyNORsYjHIBVbRr9TgCu7_3_IWmN8DUeBp5yo',
+  },
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
