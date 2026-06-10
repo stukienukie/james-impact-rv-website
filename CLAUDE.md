@@ -15,7 +15,8 @@
 ## Pages
 - / → Home
 - /services → Full services list
-- /gallery → Photo gallery (placeholders until client sends photos)
+- /gallery → Photo gallery — 11 real geotagged job photos in /public/gallery/ (AC, rot repair, water heater — before/during/after)
+- /blog → Blog listing + articles (first article: /blog/rv-ac-not-cooling-texas-heat/)
 - /service-area → Cities served
 - /faq → Accordion FAQ
 - /contact → Contact form + API route
@@ -30,6 +31,12 @@
 
 ## Environment Variables
 - RESEND_API_KEY — required for contact form email delivery
+- GOOGLE_AI_API_KEY — Google AI Studio key, used for blog image generation (in .env, gitignored)
+
+## Monox Internal
+- .monox/ folder contains SEO schemas and templates used by Monox employees
+- .monox/seo-client-onboarding-form.md — client-facing onboarding form
+- .monox/schemas/ — schema markup template, Month One summary schema, Monthly summary schema
 
 ## What NOT to Change
 - Overall visual design, colors, and typography (client approved the style)
