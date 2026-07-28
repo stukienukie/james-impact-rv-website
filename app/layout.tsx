@@ -18,6 +18,7 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://impactrvrepair.com'),
   title: 'IMPACT RV Repair | Mobile RV Repair in Kyle, TX',
   description:
     'Mobile RV repair delivered with integrity. We come to your driveway, campground, or storage lot. Serving Kyle, TX and 50 miles around. Call 512-968-5258.',
@@ -75,6 +76,17 @@ export default function RootLayout({
         <Script id="plausible-init" strategy="afterInteractive">
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
         </Script>
+
+        {/* GoHighLevel chat widget — renders only once the widget ID is set in env.
+            Paste the ID from GHL → Sites → Chat Widget into NEXT_PUBLIC_GHL_WIDGET_ID. */}
+        {process.env.NEXT_PUBLIC_GHL_WIDGET_ID && (
+          <Script
+            src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id={process.env.NEXT_PUBLIC_GHL_WIDGET_ID}
+            strategy="lazyOnload"
+          />
+        )}
       </body>
     </html>
   )

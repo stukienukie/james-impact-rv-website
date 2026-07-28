@@ -4,7 +4,7 @@
 - Framework: Next.js (App Router)
 - Styling: Tailwind CSS + shadcn/ui
 - Email: Resend (API key in .env.local as RESEND_API_KEY)
-- Deployed via: Cloudflare Workers / Pages
+- Deployed via: Vercel (project: impact-rv-repair-website)
 
 ## Client
 - James Langston — solo RV technician
@@ -19,7 +19,8 @@
 - /blog → Blog listing + articles (first article: /blog/rv-ac-not-cooling-texas-heat/)
 - /service-area → Cities served
 - /faq → Accordion FAQ
-- /contact → Contact form + API route
+- /contact → Contact form + API route (app/api/contact — Resend)
+- /review → Review funnel (app/review/review-funnel.tsx + app/api/feedback route)
 
 ## Rules
 - Do not fabricate certifications, warranty work, or team size claims

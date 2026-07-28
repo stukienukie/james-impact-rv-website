@@ -29,14 +29,14 @@ export function HeroContent() {
 
   return (
     <motion.div
-      className="max-w-3xl"
+      className="w-full max-w-2xl"
       variants={reduce ? undefined : container}
       initial={reduce ? false : 'hidden'}
       animate="show"
     >
       <motion.h1
         variants={reduce ? undefined : item}
-        className="font-[family-name:var(--font-barlow-condensed)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white uppercase tracking-tight text-balance leading-none"
+        className="font-[family-name:var(--font-barlow-condensed)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight text-balance leading-none"
       >
         Mobile RV Repair{' '}
         <span className="text-primary">Delivered With Integrity.</span>
@@ -80,7 +80,7 @@ export function HeroContent() {
       {/* Trust Badges */}
       <motion.div
         variants={reduce ? undefined : item}
-        className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3"
+        className="mt-10 grid grid-cols-2 gap-3 max-w-md"
       >
         {trustBadges.map((badge) => (
           <div

@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { HeroContent } from '@/components/hero-content'
+import { HeroQuoteForm } from '@/components/hero-quote-form'
 import { ServiceCard } from '@/components/service-card'
 import { AnimateIn, StaggerGroup, StaggerItem } from '@/components/animate-in'
 import { ReviewsMarquee } from '@/components/reviews-marquee'
@@ -184,8 +185,11 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(15,15,15,0.5)_100%)]" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-44">
-            <HeroContent />
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36">
+            <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
+              <HeroContent />
+              <HeroQuoteForm />
+            </div>
           </div>
         </section>
 

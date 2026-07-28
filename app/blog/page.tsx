@@ -17,6 +17,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'rv-roof-inspection-resealing-central-texas',
+    title: 'RV Roof Inspection & Resealing Before Fall Camping Season in Central Texas',
+    excerpt:
+      'Texas sun breaks down roof sealant faster than the manual assumes. Here\'s how to inspect your roof properly, which sealant actually belongs where, and why doing it now beats paying for rot repair later.',
+    image: '/gallery/rot-before.jpg',
+    date: 'July 28, 2026',
+    category: 'Roof & Sealants',
+  },
+  {
     slug: 'rv-ac-not-cooling-texas-heat',
     title: 'RV AC Not Cooling in the Texas Heat? Common Causes and Mobile Repair in the Austin Area',
     excerpt:

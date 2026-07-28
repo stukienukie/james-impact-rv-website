@@ -72,15 +72,22 @@ export function Nav() {
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Buttons - Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              className="btn-red-gradient text-white font-semibold uppercase tracking-wide"
+            >
+              <Link href="/contact">Get Free Quote</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-2 border-white/60 text-white bg-transparent hover:bg-white/10 hover:border-white font-semibold transition-all"
             >
               <a href="tel:512-968-5258" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                Call 512-968-5258
+                512-968-5258
               </a>
             </Button>
           </div>
@@ -100,7 +107,7 @@ export function Nav() {
       <div
         className={cn(
           'lg:hidden bg-secondary border-t border-border overflow-hidden transition-all duration-300',
-          isOpen ? 'max-h-96' : 'max-h-0'
+          isOpen ? 'max-h-[36rem]' : 'max-h-0'
         )}
       >
         <nav className="flex flex-col px-4 py-4">
@@ -116,11 +123,20 @@ export function Nav() {
           ))}
           <Button
             asChild
-            className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            className="mt-4 btn-red-gradient text-white font-semibold uppercase tracking-wide"
+          >
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              Get Free Quote
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="mt-3 border-2 border-white/60 text-white bg-transparent hover:bg-white/10 hover:border-white font-semibold"
           >
             <a href="tel:512-968-5258" className="flex items-center justify-center gap-2">
               <Phone className="h-4 w-4" />
-              Call 512-968-5258
+              512-968-5258
             </a>
           </Button>
         </nav>
