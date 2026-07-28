@@ -21,7 +21,7 @@ const posts = [
     title: 'RV Roof Inspection & Resealing Before Fall Camping Season in Central Texas',
     excerpt:
       'Texas sun breaks down roof sealant faster than the manual assumes. Here\'s how to inspect your roof properly, which sealant actually belongs where, and why doing it now beats paying for rot repair later.',
-    image: '/gallery/rot-before.jpg',
+    image: '/blog/rv-roof-sealant-inspection.jpg',
     date: 'July 28, 2026',
     category: 'Roof & Sealants',
   },

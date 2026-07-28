@@ -45,11 +45,11 @@ export function StaggerGroup({ children, staggerDelay = 0.09, className }: Stagg
 
   return (
     <motion.div
-      variants={reduce ? undefined : {
+      variants={{
         hidden: {},
-        show: { transition: { staggerChildren: staggerDelay } },
+        show: { transition: { staggerChildren: reduce ? 0 : staggerDelay } },
       }}
-      initial={reduce ? false : 'hidden'}
+      initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
       className={className}
@@ -64,9 +64,13 @@ export function StaggerItem({ children, className }: { children: ReactNode; clas
 
   return (
     <motion.div
-      variants={reduce ? undefined : {
+      variants={{
         hidden: { opacity: 0, y: 24 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: reduce ? 0 : 0.6, ease: easeOut },
+        },
       }}
       className={className}
     >

@@ -78,7 +78,7 @@ export function Nav() {
               asChild
               className="btn-red-gradient text-white font-semibold uppercase tracking-wide"
             >
-              <Link href="/contact">Get Free Quote</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
             <Button
               asChild
@@ -126,7 +126,7 @@ export function Nav() {
             className="mt-4 btn-red-gradient text-white font-semibold uppercase tracking-wide"
           >
             <Link href="/contact" onClick={() => setIsOpen(false)}>
-              Get Free Quote
+              Get a Quote
             </Link>
           </Button>
           <Button

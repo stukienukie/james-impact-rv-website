@@ -7,6 +7,12 @@ import { Button } from '@/components/ui/button'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
+const inputClass =
+  'w-full rounded-lg border-2 border-transparent bg-white px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 shadow-sm focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/30 transition-all'
+
+const labelClass =
+  'block text-sm font-bold uppercase tracking-wider text-white mb-2'
+
 export function HeroQuoteForm() {
   const reduce = useReducedMotion()
   const [status, setStatus] = useState<Status>('idle')
@@ -59,28 +65,32 @@ export function HeroQuoteForm() {
       initial={reduce ? false : { opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
-      className="w-full max-w-md lg:ml-auto rounded-2xl border border-white/15 bg-secondary/90 backdrop-blur-md shadow-2xl p-6 sm:p-8"
+      className="quote-card-gradient w-full max-w-lg lg:ml-auto rounded-2xl border border-white/20 p-7 sm:p-9"
     >
-      <h2 className="font-[family-name:var(--font-barlow-condensed)] text-3xl sm:text-4xl font-bold text-white uppercase tracking-tight text-center leading-none">
-        Get a Free Quote
+      <h2 className="font-[family-name:var(--font-barlow-condensed)] text-4xl sm:text-5xl font-bold text-white uppercase tracking-tight text-center leading-[0.95]">
+        Get a Quote
       </h2>
-      <p className="mt-3 text-sm text-white/60 text-center leading-relaxed">
-        Tell us what&apos;s going on and where you&apos;re parked. We&apos;ll get
-        right back to you.
+      <p className="mt-4 text-base text-white/85 text-center leading-relaxed font-medium">
+        Tell us what&apos;s going on and where you&apos;re parked.
+        <span className="block mt-1 text-white/70">
+          Most jobs scheduled within 24&ndash;48 hours.
+        </span>
       </p>
 
       {status === 'success' ? (
         <div
           role="status"
-          className="mt-8 flex flex-col items-center text-center gap-3 py-6"
+          className="mt-8 flex flex-col items-center text-center gap-4 py-8"
         >
-          <CheckCircle2 className="h-10 w-10 text-primary" />
-          <p className="text-white font-semibold">Request sent.</p>
-          <p className="text-sm text-white/60 leading-relaxed">
+          <CheckCircle2 className="h-12 w-12 text-white" />
+          <p className="text-2xl font-bold text-white font-[family-name:var(--font-barlow-condensed)] uppercase tracking-tight">
+            Request Sent
+          </p>
+          <p className="text-base text-white/85 leading-relaxed">
             James will reach out shortly. Need help right now? Call{' '}
             <a
               href="tel:512-968-5258"
-              className="text-primary font-semibold underline underline-offset-2"
+              className="text-white font-bold underline underline-offset-4 decoration-2"
             >
               512-968-5258
             </a>
@@ -88,7 +98,7 @@ export function HeroQuoteForm() {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+        <form onSubmit={handleSubmit} className="mt-7 space-y-5">
           {/* Honeypot */}
           <input
             type="text"
@@ -99,13 +109,10 @@ export function HeroQuoteForm() {
             className="absolute -left-[9999px] h-0 w-0 opacity-0"
           />
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-5">
             <div>
-              <label
-                htmlFor="hero-name"
-                className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-1.5"
-              >
-                Full Name <span className="text-primary">*</span>
+              <label htmlFor="hero-name" className={labelClass}>
+                Full Name <span className="text-accent">*</span>
               </label>
               <input
                 id="hero-name"
@@ -114,15 +121,12 @@ export function HeroQuoteForm() {
                 required
                 autoComplete="name"
                 placeholder="John Smith"
-                className="w-full rounded-lg border border-white/20 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+                className={inputClass}
               />
             </div>
             <div>
-              <label
-                htmlFor="hero-phone"
-                className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-1.5"
-              >
-                Phone <span className="text-primary">*</span>
+              <label htmlFor="hero-phone" className={labelClass}>
+                Phone <span className="text-accent">*</span>
               </label>
               <input
                 id="hero-phone"
@@ -131,17 +135,17 @@ export function HeroQuoteForm() {
                 required
                 autoComplete="tel"
                 placeholder="(512) 555-1234"
-                className="w-full rounded-lg border border-white/20 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+                className={inputClass}
               />
             </div>
           </div>
 
           <div>
-            <label
-              htmlFor="hero-email"
-              className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-1.5"
-            >
-              Email <span className="text-white/40 normal-case">(optional)</span>
+            <label htmlFor="hero-email" className={labelClass}>
+              Email{' '}
+              <span className="text-white/55 normal-case tracking-normal font-semibold">
+                (optional)
+              </span>
             </label>
             <input
               id="hero-email"
@@ -149,16 +153,13 @@ export function HeroQuoteForm() {
               type="email"
               autoComplete="email"
               placeholder="you@example.com"
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+              className={inputClass}
             />
           </div>
 
           <div>
-            <label
-              htmlFor="hero-message"
-              className="block text-xs font-semibold uppercase tracking-wide text-white/70 mb-1.5"
-            >
-              What&apos;s going on? <span className="text-primary">*</span>
+            <label htmlFor="hero-message" className={labelClass}>
+              What&apos;s Going On? <span className="text-accent">*</span>
             </label>
             <textarea
               id="hero-message"
@@ -166,21 +167,21 @@ export function HeroQuoteForm() {
               required
               rows={3}
               placeholder="A/C not cooling, water leak, no power — and where your RV is parked."
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors resize-none"
+              className={`${inputClass} resize-none`}
             />
           </div>
 
           {status === 'error' && (
             <div
               role="alert"
-              className="flex items-start gap-2 rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2.5"
+              className="flex items-start gap-2.5 rounded-lg border border-white/30 bg-black/25 px-4 py-3"
             >
-              <AlertCircle className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
-              <p className="text-xs text-white/80 leading-relaxed">
+              <AlertCircle className="h-5 w-5 text-white shrink-0 mt-0.5" />
+              <p className="text-sm text-white leading-relaxed font-medium">
                 {errorMessage}. Please call{' '}
                 <a
                   href="tel:512-968-5258"
-                  className="text-primary font-semibold underline underline-offset-2"
+                  className="font-bold underline underline-offset-4 decoration-2"
                 >
                   512-968-5258
                 </a>{' '}
@@ -191,27 +192,26 @@ export function HeroQuoteForm() {
 
           <Button
             type="submit"
-            size="lg"
             disabled={status === 'submitting'}
-            className="w-full btn-red-gradient text-white font-semibold text-base disabled:opacity-70"
+            className="btn-gold-gradient w-full h-14 rounded-lg font-[family-name:var(--font-barlow-condensed)] text-xl font-bold uppercase tracking-wide disabled:opacity-70"
           >
             {status === 'submitting' ? (
               <span className="flex items-center gap-2">
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-5 w-5 animate-spin" />
                 Sending...
               </span>
             ) : (
-              'Send Request'
+              'Get My Quote'
             )}
           </Button>
 
-          <p className="text-center text-xs text-white/50 leading-relaxed">
+          <p className="text-center text-sm text-white/75 leading-relaxed font-medium">
             Prefer to talk? Call{' '}
             <a
               href="tel:512-968-5258"
-              className="text-white/80 font-semibold hover:text-primary transition-colors inline-flex items-center gap-1"
+              className="text-white font-bold hover:text-accent transition-colors inline-flex items-center gap-1.5 underline underline-offset-4 decoration-2 decoration-white/40"
             >
-              <Phone className="h-3 w-3" />
+              <Phone className="h-4 w-4" />
               512-968-5258
             </a>
           </p>

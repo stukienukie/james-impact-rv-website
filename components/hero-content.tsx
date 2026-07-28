@@ -14,9 +14,17 @@ const trustBadges = [
 
 const easeOut = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
+// Variants must stay defined even when motion is reduced. If they're undefined,
+// the `show` variant can't resolve and the server-rendered opacity:0 never gets
+// cleared — leaving the hero invisible for reduced-motion users.
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.11, delayChildren: 0.25 } },
+}
+
+const containerInstant = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0, delayChildren: 0 } },
 }
 
 const item = {
@@ -24,18 +32,26 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: easeOut } },
 }
 
+// `hidden` must match `item` exactly — it's what the server renders, so any
+// difference here shows up as a hydration mismatch. Only the transition differs.
+const itemInstant = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0 } },
+}
+
 export function HeroContent() {
   const reduce = useReducedMotion()
+  const itemVariants = reduce ? itemInstant : item
 
   return (
     <motion.div
       className="w-full max-w-2xl"
-      variants={reduce ? undefined : container}
-      initial={reduce ? false : 'hidden'}
+      variants={reduce ? containerInstant : container}
+      initial="hidden"
       animate="show"
     >
       <motion.h1
-        variants={reduce ? undefined : item}
+        variants={itemVariants}
         className="font-[family-name:var(--font-barlow-condensed)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight text-balance leading-none"
       >
         Mobile RV Repair{' '}
@@ -43,7 +59,7 @@ export function HeroContent() {
       </motion.h1>
 
       <motion.p
-        variants={reduce ? undefined : item}
+        variants={itemVariants}
         className="mt-6 text-lg sm:text-xl text-white/70 max-w-xl leading-relaxed"
       >
         We come to your campsite, driveway, or storage lot. A/C down, water leak, no power?
@@ -51,7 +67,7 @@ export function HeroContent() {
       </motion.p>
 
       <motion.div
-        variants={reduce ? undefined : item}
+        variants={itemVariants}
         className="mt-8 flex flex-col sm:flex-row gap-4"
       >
         <Button
@@ -79,7 +95,7 @@ export function HeroContent() {
 
       {/* Trust Badges */}
       <motion.div
-        variants={reduce ? undefined : item}
+        variants={itemVariants}
         className="mt-10 grid grid-cols-2 gap-3 max-w-md"
       >
         {trustBadges.map((badge) => (

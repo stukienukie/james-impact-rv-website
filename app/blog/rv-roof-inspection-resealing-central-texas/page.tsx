@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-07-28',
     url: 'https://impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
-    images: [{ url: 'https://impactrvrepair.com/gallery/rot-before.jpg' }],
+    images: [{ url: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg' }],
   },
 }
 
@@ -36,7 +36,7 @@ const blogPostingJsonLd = {
     'RV Roof Inspection & Resealing Before Fall Camping Season in Central Texas',
   description:
     'Texas summer sun destroys RV roof sealant. Learn how to inspect your roof, which sealant to use, and why resealing before the fall rains prevents costly rot.',
-  image: 'https://impactrvrepair.com/gallery/rot-before.jpg',
+  image: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg',
   datePublished: '2026-07-28',
   dateModified: '2026-07-28',
   author: {
@@ -183,8 +183,8 @@ export default function RvRoofResealArticle() {
             <div className="my-10">
               <div className="relative aspect-[16/9] rounded-xl overflow-hidden border border-border">
                 <Image
-                  src="/gallery/rot-before.jpg"
-                  alt="Water damage and wood rot inside an RV caused by failed roof sealant"
+                  src="/blog/rv-roof-sealant-inspection.jpg"
+                  alt="Aged white lap sealant cracking and yellowing around a plumbing vent and roof seam on an RV roof"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 768px"
@@ -192,8 +192,8 @@ export default function RvRoofResealArticle() {
                 />
               </div>
               <p className="mt-3 text-sm text-muted-foreground italic">
-                Rot damage from a roof leak on a real customer job. This started
-                as a hairline crack in roof sealant.
+                Textbook late-summer sealant: chalky, yellowed, hairline cracks
+                along the seam, and shrinking away from the base of the vent.
               </p>
             </div>
 
@@ -235,13 +235,27 @@ export default function RvRoofResealArticle() {
                   months.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The photo above is from a job where exactly that happened. A
-                  reseal is a straightforward, affordable piece of maintenance.
+                  A reseal is a straightforward, affordable piece of maintenance.
                   Structural rot repair means opening up the wall or roof,
                   cutting out and replacing rotted framing, and rebuilding — a
                   dramatically bigger job. The entire point of inspecting now is
                   to stay on the cheap side of that line.
                 </p>
+                <div className="mt-6">
+                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden border border-border">
+                    <Image
+                      src="/gallery/rot-before.jpg"
+                      alt="Wood rot and water damage inside an RV wall caused by a roof leak"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 768px"
+                    />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground italic">
+                    An actual customer job: rot behind the wall from a roof leak
+                    that started as a hairline crack in sealant.
+                  </p>
+                </div>
                 <div className="mt-6 flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-5">
                   <AlertTriangle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <p className="text-sm text-muted-foreground leading-relaxed">
