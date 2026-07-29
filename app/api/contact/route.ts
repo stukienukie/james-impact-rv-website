@@ -85,12 +85,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Forward to GoHighLevel first — the CRM is the system of record for leads.
-    // A webhook failure must never cost us the email notification, so it's
-    // isolated and only logged.
+    // GoHighLevel is the system of record for leads — notifications are built
+    // as GHL automations, so the email below is only a fallback. The submission
+    // counts as captured if EITHER leg succeeds; we only fail the request when
+    // both do, which would mean the lead is genuinely lost.
+    let leadCaptured = false
+
     if (GHL_WEBHOOK_URL) {
       try {
-        await fetch(GHL_WEBHOOK_URL, {
+        const ghlResponse = await fetch(GHL_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           // Always send all six keys, empty string when blank. GHL builds its
@@ -106,30 +109,52 @@ export async function POST(request: NextRequest) {
           }),
           signal: AbortSignal.timeout(5000),
         })
+
+        leadCaptured = ghlResponse.ok
+
+        if (!ghlResponse.ok) {
+          console.error('GHL webhook rejected the lead:', ghlResponse.status)
+        }
       } catch (webhookError) {
         console.error('GHL webhook failed:', webhookError)
       }
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    // Best-effort email. A missing RESEND_API_KEY or unverified sending domain
+    // must not surface as a failure to the customer when GHL already has the
+    // lead — that would tell real prospects the form is broken.
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY)
 
-    await resend.emails.send({
-      from: FROM_ADDRESS,
-      to: TO_ADDRESS,
-      ...(email ? { replyTo: email } : {}),
-      subject: `New Service Request from ${name} (${source})`,
-      html: `
-        <h2>New Service Request — Impact RV Repair</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></p>
-        <p><strong>Email:</strong> ${email ? escapeHtml(email) : 'Not provided'}</p>
-        <p><strong>RV Type:</strong> ${rvType ? escapeHtml(rvType) : 'Not specified'}</p>
-        <p><strong>Came from:</strong> ${escapeHtml(source)}</p>
-        <hr />
-        <p><strong>Issue Description:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, '<br />')}</p>
-      `,
-    })
+      await resend.emails.send({
+        from: FROM_ADDRESS,
+        to: TO_ADDRESS,
+        ...(email ? { replyTo: email } : {}),
+        subject: `New Service Request from ${name} (${source})`,
+        html: `
+          <h2>New Service Request — Impact RV Repair</h2>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></p>
+          <p><strong>Email:</strong> ${email ? escapeHtml(email) : 'Not provided'}</p>
+          <p><strong>RV Type:</strong> ${rvType ? escapeHtml(rvType) : 'Not specified'}</p>
+          <p><strong>Came from:</strong> ${escapeHtml(source)}</p>
+          <hr />
+          <p><strong>Issue Description:</strong></p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br />')}</p>
+        `,
+      })
+
+      leadCaptured = true
+    } catch (emailError) {
+      console.error('Resend email failed:', emailError)
+    }
+
+    if (!leadCaptured) {
+      return NextResponse.json(
+        { error: 'Failed to send message' },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {
