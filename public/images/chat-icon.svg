@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Impact RV Repair">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e03530" />
+      <stop offset="1" stop-color="#bb2318" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="url(#brand)" />
+
+  <!-- Artwork spans x 86..442, y 170..364; recentre on the canvas and inset
+       so the mark keeps breathing room inside a round chat bubble crop -->
+  <g transform="translate(256 256) scale(0.86) translate(-264 -267)">
+  <g fill="#ffffff">
+    <!-- Trailer body: chunky silhouette, sloped nose like the logo mark -->
+    <path d="M112 170 H306 q52 0 88 34 l 36 34 q12 11 12 26 v34 q0 14 -14 14 H100 q-14 0 -14 -14 V196 q0 -26 26 -26 Z" />
+    <!-- Wheels -->
+    <circle cx="176" cy="326" r="38" />
+    <circle cx="316" cy="326" r="38" />
+  </g>
+
+  <g fill="#c72718">
+    <!-- Windows and door cut back to brand red -->
+    <rect x="128" y="200" width="74" height="52" rx="12" />
+    <rect x="222" y="200" width="74" height="52" rx="12" />
+    <rect x="322" y="200" width="62" height="98" rx="12" />
+    <circle cx="176" cy="326" r="15" />
+    <circle cx="316" cy="326" r="15" />
+  </g>
+  </g>
+</svg>
