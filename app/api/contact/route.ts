@@ -93,11 +93,14 @@ export async function POST(request: NextRequest) {
         await fetch(GHL_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          // Always send all six keys, empty string when blank. GHL builds its
+          // field mapping from the payload shape, so an omitted key on a
+          // partial submission would silently drop that field in the CRM.
           body: JSON.stringify({
             full_name: name,
             phone,
-            email: email || undefined,
-            rv_type: rvType || undefined,
+            email,
+            rv_type: rvType,
             message,
             source,
           }),

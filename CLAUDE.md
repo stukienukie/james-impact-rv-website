@@ -33,6 +33,10 @@
 ## Environment Variables
 - RESEND_API_KEY — required for contact form email delivery
 - GOOGLE_AI_API_KEY — Google AI Studio key, used for blog image generation (in .env, gitignored)
+- GHL_WEBHOOK_URL — GoHighLevel inbound webhook. Contact form leads POST here
+  before the Resend email. Unset = silent no-op. Payload always sends all six
+  keys (full_name, phone, email, rv_type, message, source) — empty string when
+  blank, never omitted, because GHL derives its field mapping from the payload.
 
 ## Monox Internal
 - .monox/ folder contains SEO schemas and templates used by Monox employees
