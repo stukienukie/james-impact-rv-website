@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import { Phone, Mail, Clock, MapPin } from 'lucide-react'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
-import { ContactForm } from './contact-form'
+import { QuoteForm } from '@/components/quote-form'
 
 export const metadata: Metadata = {
   title: 'Request a Visit — Contact Impact RV Repair | Kyle TX',
   description:
-    'Book on-site RV repair near Kyle, TX. Fill out the form or call 512-968-5258. James Langston responds within 24 hours.',
+    'Book on-site RV repair near Kyle, TX. Fill out the form or call 512-968-5258. You hear back instantly and most jobs are booked within 24 hours.',
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
@@ -54,8 +54,8 @@ export default function ContactPage() {
               Request a <span className="text-primary">Visit.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Tell us what&apos;s going on and where you&apos;re parked. James will be in
-              touch within 24 hours.
+              Tell us what&apos;s going on and where you&apos;re parked. You hear back
+              instantly and most jobs are booked within 24 hours.
             </p>
           </div>
         </section>
@@ -97,10 +97,12 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <div className="bg-card border border-border rounded-lg p-6 sm:p-8">
-                <ContactForm />
-              </div>
+              {/* Quote Form — same component as the homepage hero */}
+              <QuoteForm
+                source="Contact Page"
+                showRvType
+                className="lg:ml-auto"
+              />
             </div>
           </div>
         </section>

@@ -39,9 +39,17 @@
 - .monox/seo-client-onboarding-form.md — client-facing onboarding form
 - .monox/schemas/ — schema markup template, Month One summary schema, Monthly summary schema
 
+## Response-Time Claims
+Keep these consistent everywhere — home, contact, FAQ, quote form:
+- Response: **instant** (handled by GHL automation)
+- Booking: **most jobs booked within 24 hours**
+- Leads go into the CRM — "no customer gets forgotten"
+Do not reintroduce the old "24-48 hours" wording.
+
 ## What NOT to Change
 - Overall visual design, colors, and typography (client approved the style)
-- The "How It Works" 4-step section on the Home page
+- The "How It Works" 4-step structure on the Home page (step 2 copy was
+  updated 2026-07-28 to align response-time claims — structure stays)
 - Existing placeholder testimonials
 - Social links (Facebook + Instagram)
 - Nav and Footer structure

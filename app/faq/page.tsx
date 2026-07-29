@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: 'How quickly can you respond?',
     answer:
-      'Most appointments are scheduled within 24–48 hours. Emergency calls — A/C failures, water leaks, no power — are always moved to the front of the line. If you are traveling and stranded, call immediately and James will do everything he can to get to you the same day.',
+      'You hear back from us instantly, and most appointments are scheduled within 24 hours. Emergency calls — A/C failures, water leaks, no power — are always moved to the front of the line. If you are traveling and stranded, call immediately and James will do everything he can to get to you the same day.',
   },
   {
     question: 'What forms of payment do you accept?',

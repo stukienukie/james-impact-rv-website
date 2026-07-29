@@ -1,20 +1,35 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { Phone, Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
 const inputClass =
-  'w-full rounded-lg border-2 border-transparent bg-white px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 shadow-sm focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/30 transition-all'
+  'w-full rounded-lg border-2 border-transparent bg-white px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 shadow-sm focus:border-white focus:outline-none focus:ring-4 focus:ring-white/40 transition-all'
 
 const labelClass =
   'block text-sm font-bold uppercase tracking-wider text-white mb-2'
 
-export function HeroQuoteForm() {
+interface QuoteFormProps {
+  /** Tagged onto the lead so James can see which page it came from. */
+  source?: string
+  /** Adds the RV type field — used on the contact page where there's more room. */
+  showRvType?: boolean
+  className?: string
+}
+
+export function QuoteForm({
+  source = 'Website',
+  showRvType = false,
+  className,
+}: QuoteFormProps) {
   const reduce = useReducedMotion()
+  // Both pages could render this twice; useId keeps label/input pairs unique.
+  const uid = useId()
   const [status, setStatus] = useState<Status>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -40,8 +55,9 @@ export function HeroQuoteForm() {
           name: data.get('name'),
           phone: data.get('phone'),
           email: data.get('email') || '',
+          rvType: data.get('rvType') || '',
           message: data.get('message'),
-          source: 'Homepage Hero',
+          source,
         }),
       })
 
@@ -65,7 +81,10 @@ export function HeroQuoteForm() {
       initial={reduce ? false : { opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
-      className="quote-card-gradient w-full max-w-lg lg:ml-auto rounded-2xl border border-white/20 p-7 sm:p-9"
+      className={cn(
+        'quote-card-gradient w-full max-w-lg rounded-2xl border border-white/20 p-7 sm:p-9',
+        className
+      )}
     >
       <h2 className="font-[family-name:var(--font-barlow-condensed)] text-4xl sm:text-5xl font-bold text-white uppercase tracking-tight text-center leading-[0.95]">
         Get a Quote
@@ -73,7 +92,8 @@ export function HeroQuoteForm() {
       <p className="mt-4 text-base text-white/85 text-center leading-relaxed font-medium">
         Tell us what&apos;s going on and where you&apos;re parked.
         <span className="block mt-1 text-white/70">
-          Most jobs scheduled within 24&ndash;48 hours.
+          You hear back from us instantly and go straight into our system — no
+          customer at Impact RV Repair gets forgotten.
         </span>
       </p>
 
@@ -111,11 +131,11 @@ export function HeroQuoteForm() {
 
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="hero-name" className={labelClass}>
-                Full Name <span className="text-accent">*</span>
+              <label htmlFor={`${uid}-name`} className={labelClass}>
+                Full Name <span className="text-white/70">*</span>
               </label>
               <input
-                id="hero-name"
+                id={`${uid}-name`}
                 name="name"
                 type="text"
                 required
@@ -125,11 +145,11 @@ export function HeroQuoteForm() {
               />
             </div>
             <div>
-              <label htmlFor="hero-phone" className={labelClass}>
-                Phone <span className="text-accent">*</span>
+              <label htmlFor={`${uid}-phone`} className={labelClass}>
+                Phone <span className="text-white/70">*</span>
               </label>
               <input
-                id="hero-phone"
+                id={`${uid}-phone`}
                 name="phone"
                 type="tel"
                 required
@@ -140,29 +160,49 @@ export function HeroQuoteForm() {
             </div>
           </div>
 
-          <div>
-            <label htmlFor="hero-email" className={labelClass}>
-              Email{' '}
-              <span className="text-white/55 normal-case tracking-normal font-semibold">
-                (optional)
-              </span>
-            </label>
-            <input
-              id="hero-email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              placeholder="you@example.com"
-              className={inputClass}
-            />
+          <div className={showRvType ? 'grid sm:grid-cols-2 gap-5' : undefined}>
+            <div>
+              <label htmlFor={`${uid}-email`} className={labelClass}>
+                Email{' '}
+                <span className="text-white/55 normal-case tracking-normal font-semibold">
+                  (optional)
+                </span>
+              </label>
+              <input
+                id={`${uid}-email`}
+                name="email"
+                type="email"
+                autoComplete="email"
+                placeholder="you@example.com"
+                className={inputClass}
+              />
+            </div>
+
+            {showRvType && (
+              <div>
+                <label htmlFor={`${uid}-rv-type`} className={labelClass}>
+                  RV Type{' '}
+                  <span className="text-white/55 normal-case tracking-normal font-semibold">
+                    (optional)
+                  </span>
+                </label>
+                <input
+                  id={`${uid}-rv-type`}
+                  name="rvType"
+                  type="text"
+                  placeholder="Class A, travel trailer..."
+                  className={inputClass}
+                />
+              </div>
+            )}
           </div>
 
           <div>
-            <label htmlFor="hero-message" className={labelClass}>
-              What&apos;s Going On? <span className="text-accent">*</span>
+            <label htmlFor={`${uid}-message`} className={labelClass}>
+              What&apos;s Going On? <span className="text-white/70">*</span>
             </label>
             <textarea
-              id="hero-message"
+              id={`${uid}-message`}
               name="message"
               required
               rows={3}
@@ -193,7 +233,7 @@ export function HeroQuoteForm() {
           <Button
             type="submit"
             disabled={status === 'submitting'}
-            className="btn-gold-gradient w-full h-14 rounded-lg font-[family-name:var(--font-barlow-condensed)] text-xl font-bold uppercase tracking-wide disabled:opacity-70"
+            className="btn-quote-dark w-full h-14 rounded-lg font-[family-name:var(--font-barlow-condensed)] text-xl font-bold uppercase tracking-wide disabled:opacity-70"
           >
             {status === 'submitting' ? (
               <span className="flex items-center gap-2">
@@ -209,7 +249,7 @@ export function HeroQuoteForm() {
             Prefer to talk? Call{' '}
             <a
               href="tel:512-968-5258"
-              className="text-white font-bold hover:text-accent transition-colors inline-flex items-center gap-1.5 underline underline-offset-4 decoration-2 decoration-white/40"
+              className="text-white font-bold hover:text-white/80 transition-colors inline-flex items-center gap-1.5 underline underline-offset-4 decoration-2 decoration-white/40"
             >
               <Phone className="h-4 w-4" />
               512-968-5258

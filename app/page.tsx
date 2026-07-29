@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { HeroContent } from '@/components/hero-content'
-import { HeroQuoteForm } from '@/components/hero-quote-form'
+import { QuoteForm } from '@/components/quote-form'
 import { ServiceCard } from '@/components/service-card'
 import { AnimateIn, StaggerGroup, StaggerItem } from '@/components/animate-in'
 import { ReviewsMarquee } from '@/components/reviews-marquee'
@@ -135,7 +135,7 @@ const howItWorks = [
     step: 2,
     icon: Calendar,
     title: 'Schedule On-Site',
-    description: 'Most jobs within 24-48 hours, upfront pricing',
+    description: 'Most jobs booked within 24 hours, upfront pricing',
   },
   {
     step: 3,
@@ -188,7 +188,7 @@ export default function HomePage() {
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36">
             <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
               <HeroContent />
-              <HeroQuoteForm />
+              <QuoteForm source="Homepage Hero" className="lg:ml-auto" />
             </div>
           </div>
         </section>
@@ -344,7 +344,7 @@ export default function HomePage() {
               Ready to roll? Let&apos;s fix your RV.
             </h2>
             <p className="mt-4 text-white/70 max-w-md mx-auto">
-              James responds within 24 hours. No dealership runaround, no hassle.
+              You hear back instantly and most jobs are booked within 24 hours. No dealership runaround, no hassle.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
