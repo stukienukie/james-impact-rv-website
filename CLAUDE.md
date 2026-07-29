@@ -33,6 +33,8 @@
 ## Environment Variables
 - RESEND_API_KEY — required for contact form email delivery
 - GOOGLE_AI_API_KEY — Google AI Studio key, used for blog image generation (in .env, gitignored)
+- NEXT_PUBLIC_GHL_WIDGET_ID — GoHighLevel chat widget ID. Unset = widget not
+  rendered, so the loader script never ships to visitors without one.
 - GHL_WEBHOOK_URL — GoHighLevel inbound webhook. Contact form leads POST here
   before the Resend email. Unset = silent no-op. Payload always sends all six
   keys (full_name, phone, email, rv_type, message, source) — empty string when
