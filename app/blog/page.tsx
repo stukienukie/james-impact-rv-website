@@ -17,12 +17,32 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'rv-electrical-problems-low-voltage-texas-summer',
+    title:
+      'RV Electrical Problems in a Texas August: Tripping Breakers, Dead Outlets, and Low Voltage',
+    excerpt:
+      'Your breaker trips when the AC and the microwave overlap, half your outlets died for no reason, and the pedestal is quietly feeding you 103 volts. Here is the load math, the GFCI most owners never find, and the cheap device that saves your compressor.',
+    image: '/blog/rv-electrical-power-pedestal.jpg',
+    date: 'August 11, 2026',
+    category: 'Electrical',
+  },
+  {
+    slug: 'rv-tire-blowout-prevention-texas-summer',
+    title:
+      'RV Tire Blowouts in Texas Summer Heat: Pressure, Age, and the Damage Nobody Budgets For',
+    excerpt:
+      'Most blowouts are not bad luck — they are low pressure and old rubber. How to set cold pressure correctly, read the DOT date code, and why the tire is the cheapest part of the repair bill.',
+    image: '/blog/rv-tire-blowout-texas-heat.jpg',
+    date: 'July 14, 2026',
+    category: 'Tires & Safety',
+  },
+  {
     slug: 'rv-roof-inspection-resealing-central-texas',
     title: 'RV Roof Inspection & Resealing Before Fall Camping Season in Central Texas',
     excerpt:
       'Texas sun breaks down roof sealant faster than the manual assumes. Here\'s how to inspect your roof properly, which sealant actually belongs where, and why doing it now beats paying for rot repair later.',
     image: '/blog/rv-roof-sealant-inspection.jpg',
-    date: 'July 28, 2026',
+    date: 'June 16, 2026',
     category: 'Roof & Sealants',
   },
   {

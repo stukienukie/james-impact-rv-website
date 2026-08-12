@@ -16,7 +16,13 @@
 - / → Home
 - /services → Full services list
 - /gallery → Photo gallery — 11 real geotagged job photos in /public/gallery/ (AC, rot repair, water heater — before/during/after)
-- /blog → Blog listing + articles (first article: /blog/rv-ac-not-cooling-texas-heat/)
+- /blog → Blog listing + articles. One post per month, newest first:
+  - Aug 2026 → /blog/rv-electrical-problems-low-voltage-texas-summer/
+  - Jul 2026 → /blog/rv-tire-blowout-prevention-texas-summer/
+  - Jun 2026 → /blog/rv-roof-inspection-resealing-central-texas/
+  - May 2026 → /blog/rv-ac-not-cooling-texas-heat/
+  Each post carries BlogPosting + FAQPage JSON-LD. Dates must stay in sync
+  across the post page, app/blog/page.tsx, and app/sitemap.ts.
 - /service-area → Cities served
 - /faq → Accordion FAQ
 - /contact → Contact form + API route (app/api/contact — Resend)

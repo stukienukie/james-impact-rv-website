@@ -5,7 +5,9 @@ const base = 'https://impactrvrepair.com'
 // Blog posts carry their real publish date so search engines don't see every
 // URL claiming it changed today. Keep in sync with app/blog/page.tsx.
 const posts = [
-  { slug: 'rv-roof-inspection-resealing-central-texas', published: '2026-07-28' },
+  { slug: 'rv-electrical-problems-low-voltage-texas-summer', published: '2026-08-11' },
+  { slug: 'rv-tire-blowout-prevention-texas-summer', published: '2026-07-14' },
+  { slug: 'rv-roof-inspection-resealing-central-texas', published: '2026-06-16' },
   { slug: 'rv-ac-not-cooling-texas-heat', published: '2026-05-29' },
 ]
 

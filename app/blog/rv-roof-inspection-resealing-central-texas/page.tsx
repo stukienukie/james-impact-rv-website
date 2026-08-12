@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Texas summer sun destroys RV roof sealant. Here is how to inspect your roof and why resealing before the fall rains prevents costly rot.',
     type: 'article',
-    publishedTime: '2026-07-28',
+    publishedTime: '2026-06-16',
     url: 'https://impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
     images: [{ url: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg' }],
   },
@@ -37,8 +37,8 @@ const blogPostingJsonLd = {
   description:
     'Texas summer sun destroys RV roof sealant. Learn how to inspect your roof, which sealant to use, and why resealing before the fall rains prevents costly rot.',
   image: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg',
-  datePublished: '2026-07-28',
-  dateModified: '2026-07-28',
+  datePublished: '2026-06-16',
+  dateModified: '2026-06-16',
   author: {
     '@type': 'Person',
     name: 'James Langston',
@@ -153,7 +153,7 @@ export default function RvRoofResealArticle() {
               <span className="text-xs font-bold uppercase tracking-widest text-primary">
                 Roof &amp; Sealants
               </span>
-              <span className="text-xs text-muted-foreground">July 28, 2026</span>
+              <span className="text-xs text-muted-foreground">June 16, 2026</span>
             </div>
             <h1 className="font-[family-name:var(--font-barlow-condensed)] text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary-foreground uppercase tracking-tight leading-tight">
               RV Roof Inspection &amp; Resealing Before Fall Camping Season in
@@ -169,9 +169,10 @@ export default function RvRoofResealArticle() {
             {/* Intro */}
             <div className="prose prose-lg max-w-none text-foreground">
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Right now is the single best window of the year to get on your RV
-                roof. Summer has already done its worst to your sealant, and the
-                fall rains have not arrived yet. If you wait until the first real
+                Early summer is the single best window of the year to get on your
+                RV roof. The spring storms are behind you, the fall rains are
+                still months out, and you have time to fix what you find before
+                either season gets a chance to test it. If you wait until the first real
                 storm to find out your roof is compromised, you are no longer
                 paying for a reseal — you are paying for rot repair. Here is how
                 to check your roof properly, and what we find most often on rigs
@@ -192,7 +193,7 @@ export default function RvRoofResealArticle() {
                 />
               </div>
               <p className="mt-3 text-sm text-muted-foreground italic">
-                Textbook late-summer sealant: chalky, yellowed, hairline cracks
+                Textbook Central Texas sealant failure: chalky, yellowed, hairline cracks
                 along the seam, and shrinking away from the base of the vent.
               </p>
             </div>
@@ -462,16 +463,28 @@ export default function RvRoofResealArticle() {
                 <p className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
                   Related Reading
                 </p>
-                <Link
-                  href="/blog/rv-ac-not-cooling-texas-heat"
-                  className="group inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-                >
-                  <span className="font-semibold">
-                    RV AC Not Cooling in the Texas Heat? Common Causes and Mobile
-                    Repair
-                  </span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
-                </Link>
+                <div className="space-y-3">
+                  <Link
+                    href="/blog/rv-ac-not-cooling-texas-heat"
+                    className="group flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    <span className="font-semibold">
+                      RV AC Not Cooling in the Texas Heat? Common Causes and Mobile
+                      Repair
+                    </span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  </Link>
+                  <Link
+                    href="/blog/rv-tire-blowout-prevention-texas-summer"
+                    className="group flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    <span className="font-semibold">
+                      RV Tire Blowouts in Texas Summer Heat: Pressure, Age, and
+                      Damage
+                    </span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  </Link>
+                </div>
               </div>
 
               {/* Service footer */}

@@ -199,6 +199,34 @@ export default function RvAcArticle() {
                 </div>
               </div>
 
+              {/* Related */}
+              <div className="border-t border-border pt-6">
+                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
+                  Related Reading
+                </p>
+                <div className="space-y-3">
+                  <Link
+                    href="/blog/rv-electrical-problems-low-voltage-texas-summer"
+                    className="group flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    <span className="font-semibold">
+                      RV Electrical Problems in a Texas August: Tripping Breakers
+                      and Low Voltage
+                    </span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  </Link>
+                  <Link
+                    href="/blog/rv-roof-inspection-resealing-central-texas"
+                    className="group flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    <span className="font-semibold">
+                      RV Roof Inspection &amp; Resealing Before Fall Camping Season
+                    </span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  </Link>
+                </div>
+              </div>
+
               {/* Service footer */}
               <p className="text-sm text-muted-foreground border-t border-border pt-6">
                 Serving Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop, and Central Texas within 50 miles of Kyle with on-site RV repair and maintenance. Mon–Sat, 8am–6pm · 512-968-5258
