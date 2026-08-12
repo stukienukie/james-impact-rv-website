@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Phone, MapPin } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { CityGrid } from '@/components/city-grid'
+import { ServiceAreaMap } from '@/components/service-area-map'
 
 export const metadata: Metadata = {
   title: 'Mobile RV Repair Service Area — Kyle TX & 50 Miles Around | Impact RV Repair',
@@ -61,10 +62,7 @@ export default function ServiceAreaPage() {
 
               {/* About the Coverage */}
               <div className="lg:sticky lg:top-28 space-y-6">
-                <div className="aspect-[4/3] bg-muted rounded-lg border border-border flex flex-col items-center justify-center gap-4">
-                  <MapPin className="h-16 w-16 text-muted-foreground/50" />
-                  <span className="text-muted-foreground">service area map placeholder</span>
-                </div>
+                <ServiceAreaMap />
 
                 <div className="prose prose-sm max-w-none text-muted-foreground leading-relaxed space-y-4">
                   <p>
