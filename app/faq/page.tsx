@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'RV Repair FAQ — Impact RV Repair Kyle TX',
   description:
     'Common questions about mobile RV repair near Kyle, TX — response times, service area, payment, and more. Impact RV Repair. 512-968-5258.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com/faq',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',

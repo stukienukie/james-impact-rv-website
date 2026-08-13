@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     'Texas summer sun destroys RV roof sealant. Learn how to inspect your roof, which sealant to use, and why resealing before the fall rains prevents costly rot. Mobile RV repair in Kyle, Austin, San Marcos and Central Texas. Call 512-968-5258.',
   alternates: {
-    canonical: 'https://impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
+    canonical: 'https://www.impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
   },
   other: {
     'geo.placename': 'Kyle, TX',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
       'Texas summer sun destroys RV roof sealant. Here is how to inspect your roof and why resealing before the fall rains prevents costly rot.',
     type: 'article',
     publishedTime: '2026-06-16',
-    url: 'https://impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
-    images: [{ url: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg' }],
+    url: 'https://www.impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
+    images: [{ url: 'https://www.impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg' }],
   },
 }
 
@@ -36,7 +36,7 @@ const blogPostingJsonLd = {
     'RV Roof Inspection & Resealing Before Fall Camping Season in Central Texas',
   description:
     'Texas summer sun destroys RV roof sealant. Learn how to inspect your roof, which sealant to use, and why resealing before the fall rains prevents costly rot.',
-  image: 'https://impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg',
+  image: 'https://www.impactrvrepair.com/blog/rv-roof-sealant-inspection.jpg',
   datePublished: '2026-06-16',
   dateModified: '2026-06-16',
   author: {
@@ -46,11 +46,11 @@ const blogPostingJsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Impact RV Repair',
-    url: 'https://impactrvrepair.com',
+    url: 'https://www.impactrvrepair.com',
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
+    '@id': 'https://www.impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
   },
   keywords:
     'rv roof repair, rv roof resealing, rv roof leak, rv water damage repair, mobile rv repair kyle tx, rv repair near me, rv repair austin, rv repair san marcos, rv roof sealant texas',

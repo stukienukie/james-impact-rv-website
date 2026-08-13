@@ -18,7 +18,7 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://impactrvrepair.com'),
+  metadataBase: new URL('https://www.impactrvrepair.com'),
   title: 'IMPACT RV Repair | Mobile RV Repair in Kyle, TX',
   description:
     'Mobile RV repair delivered with integrity. We come to your driveway, campground, or storage lot. Serving Kyle, TX and 50 miles around. Call 512-968-5258.',

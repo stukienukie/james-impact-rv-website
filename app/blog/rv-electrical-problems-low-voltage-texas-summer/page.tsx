@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Breaker tripping, dead outlets, and low campground voltage are the most common RV electrical problems in a Texas August. Learn 30 vs 50 amp load limits, why low voltage kills AC compressors, the GFCI reset most owners miss, and what is safe to DIY. Mobile RV repair in Kyle, Austin, San Marcos. Call 512-968-5258.',
   alternates: {
     canonical:
-      'https://impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
+      'https://www.impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
   },
   other: {
     'geo.placename': 'Kyle, TX',
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
       'Why your breaker keeps tripping, why half your outlets went dead, and why low campground voltage is the most expensive RV problem nobody watches for.',
     type: 'article',
     publishedTime: '2026-08-11',
-    url: 'https://impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
+    url: 'https://www.impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
     images: [
       {
-        url: 'https://impactrvrepair.com/blog/rv-electrical-power-pedestal.jpg',
+        url: 'https://www.impactrvrepair.com/blog/rv-electrical-power-pedestal.jpg',
       },
     ],
   },
@@ -42,7 +42,7 @@ const blogPostingJsonLd = {
     'RV Electrical Problems in a Texas August: Tripping Breakers, Dead Outlets, and the Low Voltage That Kills Air Conditioners',
   description:
     'The most common RV electrical problems in Texas summer heat — 30 and 50 amp load limits, low campground voltage, GFCI resets, and overheated shore power connections — and which ones are safe to fix yourself.',
-  image: 'https://impactrvrepair.com/blog/rv-electrical-power-pedestal.jpg',
+  image: 'https://www.impactrvrepair.com/blog/rv-electrical-power-pedestal.jpg',
   datePublished: '2026-08-11',
   dateModified: '2026-08-11',
   author: {
@@ -52,12 +52,12 @@ const blogPostingJsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Impact RV Repair',
-    url: 'https://impactrvrepair.com',
+    url: 'https://www.impactrvrepair.com',
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id':
-      'https://impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
+      'https://www.impactrvrepair.com/blog/rv-electrical-problems-low-voltage-texas-summer',
   },
   keywords:
     'rv electrical problems, rv breaker keeps tripping, rv outlets not working, rv low voltage, rv surge protector, 30 amp vs 50 amp rv, rv converter not charging, mobile rv repair kyle tx, rv repair near me, rv repair austin, rv repair san marcos',

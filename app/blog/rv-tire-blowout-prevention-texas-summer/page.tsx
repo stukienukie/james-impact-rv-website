@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Hot Texas pavement causes most RV tire blowouts, and nearly all of them are preventable. Learn correct cold tire pressure, how to read the DOT date code, when to replace by age, and what blowout damage actually costs. Mobile RV repair in Kyle, Austin, San Marcos. Call 512-968-5258.',
   alternates: {
     canonical:
-      'https://impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
+      'https://www.impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
   },
   other: {
     'geo.placename': 'Kyle, TX',
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
       'Most RV tire blowouts come down to pressure and age, not bad luck. Here is how to check both properly before a Texas summer trip.',
     type: 'article',
     publishedTime: '2026-07-14',
-    url: 'https://impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
+    url: 'https://www.impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
     images: [
-      { url: 'https://impactrvrepair.com/blog/rv-tire-blowout-texas-heat.jpg' },
+      { url: 'https://www.impactrvrepair.com/blog/rv-tire-blowout-texas-heat.jpg' },
     ],
   },
 }
@@ -40,7 +40,7 @@ const blogPostingJsonLd = {
     'RV Tire Blowouts in Texas Summer Heat: Pressure, Age, and the Damage Nobody Budgets For',
   description:
     'Hot Texas pavement causes most RV tire blowouts, and nearly all of them are preventable. Correct cold pressure, DOT date codes, age limits, and the repair bill a blowout actually leaves behind.',
-  image: 'https://impactrvrepair.com/blog/rv-tire-blowout-texas-heat.jpg',
+  image: 'https://www.impactrvrepair.com/blog/rv-tire-blowout-texas-heat.jpg',
   datePublished: '2026-07-14',
   dateModified: '2026-07-14',
   author: {
@@ -50,11 +50,11 @@ const blogPostingJsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Impact RV Repair',
-    url: 'https://impactrvrepair.com',
+    url: 'https://www.impactrvrepair.com',
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
+    '@id': 'https://www.impactrvrepair.com/blog/rv-tire-blowout-prevention-texas-summer',
   },
   keywords:
     'rv tire blowout, rv tire pressure, rv tire age, travel trailer tire blowout damage, rv underbelly repair, mobile rv repair kyle tx, rv repair near me, rv repair austin, rv repair san marcos, rv repair new braunfels',

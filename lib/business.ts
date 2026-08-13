@@ -2,11 +2,11 @@
  * Shared NAP (name, address, phone) and JSON-LD building blocks.
  *
  * The home page carries the canonical AutoRepair entity at
- * https://impactrvrepair.com/#business. Service and location pages reference
+ * https://www.impactrvrepair.com/#business. Service and location pages reference
  * that @id rather than redeclaring the business, so search engines see one
  * business with many pages instead of many competing business records.
  */
-export const SITE_URL = 'https://impactrvrepair.com'
+export const SITE_URL = 'https://www.impactrvrepair.com'
 export const BUSINESS_ID = `${SITE_URL}/#business`
 
 export const BUSINESS = {

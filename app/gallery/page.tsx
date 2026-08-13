@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Our Work — RV Repair Photos | Impact RV Repair Kyle TX',
   description:
     'See real repairs from Impact RV Repair — serving Kyle, Buda, Austin, San Marcos, and Central Texas. Mobile RV service delivered with integrity.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com/gallery',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',

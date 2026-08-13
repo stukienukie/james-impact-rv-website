@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'RV Repair Tips & Advice | Impact RV Repair Blog — Kyle, TX',
   description:
     'Mobile RV repair tips, troubleshooting guides, and local advice from Impact RV Repair in Kyle, TX. Serving Austin, San Marcos, New Braunfels, and Central Texas.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com/blog',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',

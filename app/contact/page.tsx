@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Request a Visit — Contact Impact RV Repair | Kyle TX',
   description:
     'Book on-site RV repair near Kyle, TX. Fill out the form or call 512-968-5258. You hear back instantly and most jobs are booked within 24 hours.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com/contact',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: 'Mobile RV Repair Near Kyle, TX | Impact RV Repair | 512-968-5258',
   description:
     'Impact RV Repair provides mobile RV repair, maintenance, and custom installations 50 miles around Kyle, TX. On-site service for any RV — no dealership hassle. Call 512-968-5258.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
@@ -46,8 +49,8 @@ const localBusinessJsonLd = {
     'Mobile RV repair, maintenance, and custom installations serving Kyle, TX and surrounding areas within 50 miles. On-site service for any RV type — no dealership hassle.',
   telephone: '+15129685258',
   email: 'james@impactrvrepair.com',
-  url: 'https://impactrvrepair.com',
-  image: 'https://impactrvrepair.com/images/impact-rv-logo.png',
+  url: 'https://www.impactrvrepair.com',
+  image: 'https://www.impactrvrepair.com/images/impact-rv-logo.png',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '292 W Branch Rd',

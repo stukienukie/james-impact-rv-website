@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       // search landing page — keep it out of the index.
       disallow: ['/review'],
     },
-    sitemap: 'https://impactrvrepair.com/sitemap.xml',
+    sitemap: 'https://www.impactrvrepair.com/sitemap.xml',
   }
 }

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { serviceSlugs } from '@/lib/services'
 import { locationSlugs } from '@/lib/locations'
 
-const base = 'https://impactrvrepair.com'
+const base = 'https://www.impactrvrepair.com'
 
 // Blog posts carry their real publish date so search engines don't see every
 // URL claiming it changed today. Keep in sync with app/blog/page.tsx.

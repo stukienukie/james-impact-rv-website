@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'RV AC Not Cooling in the Texas Heat? Common Causes and Mobile Repair | Impact RV Repair',
   description:
     'RV air conditioner not blowing cold air in Central Texas? Learn the most common causes and how Impact RV Repair provides on-site AC repair in Kyle, Austin, San Marcos, and the surrounding area.',
+  alternates: {
+    canonical: 'https://www.impactrvrepair.com/blog/rv-ac-not-cooling-texas-heat',
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
@@ -21,7 +24,7 @@ const blogPostingJsonLd = {
   '@type': 'BlogPosting',
   headline: 'RV AC Not Cooling in the Texas Heat? Common Causes and Mobile Repair in the Austin Area',
   description: 'RV air conditioner not blowing cold air in Central Texas? Learn the most common causes and how Impact RV Repair provides on-site AC repair in Kyle, Austin, San Marcos, and the surrounding area.',
-  image: 'https://impactrvrepair.com/blog/rv-ac-texas-heat.jpg',
+  image: 'https://www.impactrvrepair.com/blog/rv-ac-texas-heat.jpg',
   datePublished: '2026-05-29',
   dateModified: '2026-05-29',
   author: {
@@ -31,11 +34,11 @@ const blogPostingJsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Impact RV Repair',
-    url: 'https://impactrvrepair.com',
+    url: 'https://www.impactrvrepair.com',
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://impactrvrepair.com/blog/rv-ac-not-cooling-texas-heat',
+    '@id': 'https://www.impactrvrepair.com/blog/rv-ac-not-cooling-texas-heat',
   },
   keywords: 'rv ac repair, rv air conditioner not cooling, mobile rv repair kyle tx, rv ac repair austin, rv repair san marcos',
   articleSection: 'AC Repair',
