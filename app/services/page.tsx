@@ -1,85 +1,60 @@
 import type { Metadata } from 'next'
-import {
-  Wrench,
-  Zap,
-  Droplets,
-  Thermometer,
-  Cog,
-  Shield,
-  ClipboardCheck,
-  Sun,
-  Phone,
-} from 'lucide-react'
+import Link from 'next/link'
+import { MapPin, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { ServiceCard } from '@/components/service-card'
 import { AnimateIn, StaggerGroup, StaggerItem } from '@/components/animate-in'
+import { services } from '@/lib/services'
+import { locations } from '@/lib/locations'
+import { SITE_URL, breadcrumbJsonLd } from '@/lib/business'
 
 export const metadata: Metadata = {
   title: 'Mobile RV Repair Services Kyle TX — AC, Roof, Electrical & More | Impact RV Repair',
   description:
     'Mobile RV repair services in Kyle TX and Hays County — AC repair, roof repair, electrical, plumbing, slide-outs, and more. We come to you anywhere in Central Texas. Call 512-968-5258.',
+  alternates: {
+    canonical: `${SITE_URL}/services`,
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
   },
 }
 
-const services = [
-  {
-    icon: <Wrench className="h-7 w-7 text-primary" />,
-    title: 'General Repairs',
-    description:
-      'Diagnostics and repair for any system on any RV, any brand. From minor fixes to major overhauls, we handle it all on-site.',
-  },
-  {
-    icon: <Zap className="h-7 w-7 text-primary" />,
-    title: 'Electrical Systems',
-    description:
-      '12V/120V troubleshooting, converters, inverters, batteries, solar, shore power connections and complete rewiring.',
-  },
-  {
-    icon: <Droplets className="h-7 w-7 text-primary" />,
-    title: 'Plumbing & Water',
-    description:
-      'Fresh water, gray/black tanks, water heaters, pumps, leak detection, pipe repair, and winterization services.',
-  },
-  {
-    icon: <Thermometer className="h-7 w-7 text-primary" />,
-    title: 'RV AC Repair & HVAC',
-    description:
-      'RV AC repair near Kyle TX and across Central Texas — rooftop units, furnaces, refrigerators, and full HVAC swaps. Same-week service available.',
-  },
-  {
-    icon: <Cog className="h-7 w-7 text-primary" />,
-    title: 'Appliance Service',
-    description:
-      'Awnings, slide-outs, leveling jacks, generators, and OEM replacements for all major RV appliances.',
-  },
-  {
-    icon: <Shield className="h-7 w-7 text-primary" />,
-    title: 'RV Roof Repair & Resealing',
-    description:
-      'RV roof repair near me — on-site roof recoats, leak repair, sealant maintenance, and full roof inspections across Kyle TX and Hays County.',
-  },
-  {
-    icon: <ClipboardCheck className="h-7 w-7 text-primary" />,
-    title: 'Preventive Maintenance',
-    description:
-      'Pre-trip and seasonal service packages to keep your RV road-ready and prevent costly breakdowns.',
-  },
-  {
-    icon: <Sun className="h-7 w-7 text-primary" />,
-    title: 'Custom Installations',
-    description:
-      'Solar systems, lithium battery banks, backup cameras, satellite dishes, and audio upgrades.',
-  },
-]
+// ItemList of every service page so the hub tells search engines what sits
+// beneath it. Keep in sync with lib/services.ts by construction, not by hand.
+const serviceListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Mobile RV Repair Services — Kyle, TX',
+  itemListElement: services.map((service, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: service.name,
+    url: `${SITE_URL}/services/${service.slug}`,
+  })),
+}
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: 'Home', path: '/' },
+              { name: 'Services', path: '/services' },
+            ])
+          ),
+        }}
+      />
       <Nav />
 
       <main>
@@ -100,16 +75,50 @@ export default function ServicesPage() {
         <section className="py-20 lg:py-28 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {services.map((service) => (
-                <StaggerItem key={service.title}>
-                  <ServiceCard
-                    icon={service.icon}
-                    title={service.title}
-                    description={service.description}
-                  />
-                </StaggerItem>
-              ))}
+              {services.map((service) => {
+                const Icon = service.icon
+                return (
+                  <StaggerItem key={service.slug}>
+                    <ServiceCard
+                      icon={<Icon className="h-7 w-7 text-primary" />}
+                      title={service.name}
+                      description={service.cardDescription}
+                      href={`/services/${service.slug}`}
+                    />
+                  </StaggerItem>
+                )
+              })}
             </StaggerGroup>
+          </div>
+        </section>
+
+        {/* Cities — internal links to the location pages */}
+        <section className="pb-20 lg:pb-28 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-t border-border pt-10">
+              <h2 className="font-[family-name:var(--font-barlow-condensed)] text-2xl sm:text-3xl font-bold text-foreground uppercase tracking-tight mb-2">
+                Every service, at your location
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                On-site anywhere within 50 miles of Kyle, TX. Pick your city for
+                local detail.
+              </p>
+              <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                {locations.map((location) => (
+                  <li key={location.slug}>
+                    <Link
+                      href={`/service-area/${location.slug}`}
+                      className="group flex items-center gap-2 p-3 rounded-lg bg-muted/50 border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors"
+                    >
+                      <MapPin className="h-4 w-4 text-primary shrink-0" />
+                      <span className="text-foreground font-medium text-sm group-hover:text-primary transition-colors">
+                        {location.city}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 

@@ -11,7 +11,15 @@ const exploreLinks = [
   { href: '/review', label: 'Leave a Review' },
 ]
 
-const serviceAreas = ['Kyle', 'Buda', 'Austin', 'San Marcos']
+// Same four cities as before — now linked to their location pages so every
+// page on the site carries an internal link into the service-area cluster.
+// Structure is unchanged; only the city names became links.
+const serviceAreas = [
+  { city: 'Kyle', slug: 'kyle-tx' },
+  { city: 'Buda', slug: 'buda-tx' },
+  { city: 'Austin', slug: 'austin-tx' },
+  { city: 'San Marcos', slug: 'san-marcos-tx' },
+]
 
 export function Footer() {
   return (
@@ -122,7 +130,18 @@ export function Footer() {
               &copy; {new Date().getFullYear()} IMPACT RV Repair. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm text-center sm:text-right">
-              Mobile RV repair in {serviceAreas.join(' · ')}
+              Mobile RV repair in{' '}
+              {serviceAreas.map((area, index) => (
+                <span key={area.slug}>
+                  {index > 0 && ' · '}
+                  <Link
+                    href={`/service-area/${area.slug}`}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {area.city}
+                  </Link>
+                </span>
+              ))}
             </p>
           </div>
         </div>

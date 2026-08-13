@@ -22,6 +22,7 @@ import { QuoteForm } from '@/components/quote-form'
 import { ServiceCard } from '@/components/service-card'
 import { AnimateIn, StaggerGroup, StaggerItem } from '@/components/animate-in'
 import { ReviewsMarquee } from '@/components/reviews-marquee'
+import { BUSINESS_ID } from '@/lib/business'
 
 export const metadata: Metadata = {
   title: 'Mobile RV Repair Near Kyle, TX | Impact RV Repair | 512-968-5258',
@@ -33,9 +34,13 @@ export const metadata: Metadata = {
   },
 }
 
+// Canonical business entity. Service and location pages reference this @id
+// instead of redeclaring the business, so search engines see one business
+// with many pages rather than 25 competing business records.
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AutoRepair',
+  '@id': BUSINESS_ID,
   name: 'Impact RV Repair',
   description:
     'Mobile RV repair, maintenance, and custom installations serving Kyle, TX and surrounding areas within 50 miles. On-site service for any RV type — no dealership hassle.',
@@ -101,26 +106,32 @@ const localBusinessJsonLd = {
   ],
 }
 
+// Titles and copy unchanged — each card now links to the matching service page
+// so the home page feeds the /services cluster.
 const servicesPreview = [
   {
     icon: <Wrench className="h-7 w-7 text-primary" />,
     title: 'General Repairs',
     description: 'Diagnostics and repair for any system on any RV',
+    href: '/services',
   },
   {
     icon: <Zap className="h-7 w-7 text-primary" />,
     title: 'Electrical Systems',
     description: '12V/120V troubleshooting, converters, inverters, solar',
+    href: '/services/rv-electrical-repair',
   },
   {
     icon: <Droplets className="h-7 w-7 text-primary" />,
     title: 'Plumbing & Water',
     description: 'Fresh water, tanks, water heaters, pumps, leaks',
+    href: '/services/rv-plumbing-repair',
   },
   {
     icon: <Thermometer className="h-7 w-7 text-primary" />,
     title: 'A/C, Heat & Refrigeration',
     description: 'Rooftop A/C, furnaces, refrigerators, HVAC swaps',
+    href: '/services/rv-ac-repair',
   },
 ]
 
@@ -274,6 +285,7 @@ export default function HomePage() {
                     icon={service.icon}
                     title={service.title}
                     description={service.description}
+                    href={service.href}
                   />
                 </StaggerItem>
               ))}

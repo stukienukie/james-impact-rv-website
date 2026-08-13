@@ -1,4 +1,6 @@
 import type { MetadataRoute } from 'next'
+import { serviceSlugs } from '@/lib/services'
+import { locationSlugs } from '@/lib/locations'
 
 const base = 'https://impactrvrepair.com'
 
@@ -17,7 +19,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: base, lastModified: now, changeFrequency: 'monthly', priority: 1 },
     { url: `${base}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    // Service pages sit just under the hub — these are the primary commercial
+    // landing pages, so they outrank the supporting pages below.
+    ...serviceSlugs.map((slug) => ({
+      url: `${base}/services/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     { url: `${base}/service-area`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...locationSlugs.map((slug) => ({
+      url: `${base}/service-area/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/gallery`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },

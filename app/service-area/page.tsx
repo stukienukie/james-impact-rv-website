@@ -1,25 +1,60 @@
 import type { Metadata } from 'next'
-import { Phone } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { CityGrid } from '@/components/city-grid'
 import { ServiceAreaMap } from '@/components/service-area-map'
+import { locations } from '@/lib/locations'
+import { services } from '@/lib/services'
+import { SITE_URL, breadcrumbJsonLd } from '@/lib/business'
 
 export const metadata: Metadata = {
   title: 'Mobile RV Repair Service Area — Kyle TX & 50 Miles Around | Impact RV Repair',
   description:
-    'Impact RV Repair serves Kyle, Buda, Austin, Round Rock, San Marcos, Georgetown, and the surrounding Central Texas region. Call 512-968-5258.',
+    'Impact RV Repair serves Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop, Dripping Springs, Wimberley and the surrounding Central Texas region. Call 512-968-5258.',
+  alternates: {
+    canonical: `${SITE_URL}/service-area`,
+  },
   other: {
     'geo.placename': 'Kyle, TX',
     'geo.region': 'US-TX',
   },
 }
 
+// ItemList of every location page so the hub tells search engines what sits
+// beneath it. Built from lib/locations.ts so the two cannot drift apart.
+const areaListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Mobile RV Repair Service Area — 50 miles around Kyle, TX',
+  itemListElement: locations.map((location, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: `Mobile RV Repair in ${location.city}, TX`,
+    url: `${SITE_URL}/service-area/${location.slug}`,
+  })),
+}
 
 export default function ServiceAreaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(areaListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: 'Home', path: '/' },
+              { name: 'Service Area', path: '/service-area' },
+            ])
+          ),
+        }}
+      />
       <Nav />
 
       <main>
@@ -45,6 +80,10 @@ export default function ServiceAreaPage() {
                 <h2 className="font-[family-name:var(--font-barlow-condensed)] text-2xl sm:text-3xl font-bold text-foreground uppercase tracking-tight mb-6">
                   Cities We Serve
                 </h2>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Pick a city for local detail on where we work and what owners
+                  there call about most.
+                </p>
                 <CityGrid />
 
                 <div className="mt-8 p-4 rounded-lg bg-primary/5 border border-primary/20">
@@ -91,6 +130,54 @@ export default function ServiceAreaPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services available everywhere in the radius */}
+        <section className="py-16 lg:py-20 bg-muted/40 border-y border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-[family-name:var(--font-barlow-condensed)] text-2xl sm:text-3xl font-bold text-foreground uppercase tracking-tight mb-2">
+              What we do, everywhere in the radius
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Every service below is mobile — the shop comes to wherever your RV
+              is parked.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {services.map((service) => {
+                const Icon = service.icon
+                return (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="group rounded-xl border border-border bg-card p-5 hover:border-primary/40 transition-colors"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary/20">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-[family-name:var(--font-barlow-condensed)] text-lg font-semibold text-card-foreground uppercase tracking-tight transition-colors group-hover:text-primary">
+                          {service.name}
+                        </h3>
+                        <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                          {service.cardDescription}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+            <div className="mt-8">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                All services
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
