@@ -5,7 +5,6 @@ import {
   Zap,
   Droplets,
   Flame,
-  Hammer,
   Refrigerator,
   MoveHorizontal,
   Umbrella,
@@ -226,7 +225,7 @@ export const services: Service[] = [
           'Yes. Sealant degrades from heat and UV whether or not it ever gets rained on, and a stored rig gets looked at less often — so problems go unnoticed longer rather than not happening at all.',
       },
     ],
-    related: ['rv-water-damage-repair', 'rv-preventive-maintenance'],
+    related: ['rv-preventive-maintenance', 'rv-awning-repair'],
   },
 
   {
@@ -408,7 +407,7 @@ export const services: Service[] = [
           'Yes. Dump valves, blade seals, and seized cable actuators are all replaceable wherever the RV is parked, and it is one of the more common plumbing jobs on older rigs.',
       },
     ],
-    related: ['rv-water-heater-repair', 'rv-water-damage-repair'],
+    related: ['rv-water-heater-repair', 'rv-appliance-repair'],
   },
 
   {
@@ -500,97 +499,6 @@ export const services: Service[] = [
       },
     ],
     related: ['rv-plumbing-repair', 'rv-appliance-repair'],
-  },
-
-  {
-    slug: 'rv-water-damage-repair',
-    name: 'RV Water Damage & Rot Repair',
-    h1: 'RV Water Damage & Rot Repair',
-    icon: Hammer,
-    metaTitle: 'RV Water Damage & Rot Repair Kyle TX — Soft Floors & Walls | Impact RV Repair',
-    metaDescription:
-      'Mobile RV water damage and rot repair in Kyle, Buda, Austin, San Marcos and Central Texas. Soft floors, rotted framing, delamination, wall rebuilds. Call 512-968-5258.',
-    keywords:
-      'rv water damage repair, rv rot repair, rv soft floor repair, rv delamination repair, rv wall rebuild, mobile rv repair kyle tx',
-    cardDescription:
-      'Soft floors, rotted framing, delaminated sidewalls, and structural rebuilds after a long-running leak.',
-    intro:
-      'Water damage is the single most expensive thing that happens to an RV, and it is almost always the result of a leak that went unnoticed for a season or more. Impact RV Repair opens up, dries out, and rebuilds damaged floors, walls, and framing on site across Central Texas.',
-    symptomsHeading: 'Signs of water damage',
-    symptoms: [
-      'A floor that flexes, gives, or feels spongy underfoot',
-      'Wall paneling or wallpaper separating, bubbling, or peeling at the seams',
-      'Exterior sidewalls that ripple or bulge — delamination',
-      'Dark staining spreading from a corner, window, or slide opening',
-      'A musty smell that persists no matter how much the rig is aired out',
-      'Screws or trim that will no longer hold because the wood behind them is gone',
-    ],
-    includesHeading: 'What the service covers',
-    includes: [
-      {
-        title: 'Damage assessment',
-        body: 'Probing and moisture reading to map how far the damage actually extends, which is nearly always further than the visible stain suggests. You get the real scope before committing to anything.',
-      },
-      {
-        title: 'Source repair first',
-        body: 'The leak gets found and stopped before any rebuild starts. Rebuilding around an active leak wastes the entire repair, so the roof, window, seam, or plumbing fitting responsible is handled first.',
-      },
-      {
-        title: 'Floor repair',
-        body: 'Cutting out failed decking, replacing framing where the rot reached it, and restoring the subfloor properly rather than laying new covering over soft material.',
-      },
-      {
-        title: 'Wall and framing rebuild',
-        body: 'Removing paneling, cutting out rotted studs and luan, replacing structural members, and closing the wall back up so it carries load the way it was designed to.',
-      },
-      {
-        title: 'Window and slide reseal',
-        body: 'Windows and slide-out openings are two of the most common entry points. Both get pulled, cleaned, and resealed properly instead of caulked over from the outside.',
-      },
-      {
-        title: 'Delamination repair',
-        body: 'Assessment and repair of separated sidewall skins where the panel is still salvageable, and a straight answer about when it is not.',
-      },
-    ],
-    body: [
-      {
-        heading: 'Why the damage is always bigger than it looks',
-        paragraphs: [
-          'RV walls and floors are built from thin luan bonded to foam and framing. It is a light, efficient structure, and it has almost no tolerance for sustained moisture. Once water reaches it, the material wicks and the adhesive bond fails progressively outward from the entry point.',
-          'The stain visible on your ceiling or the soft patch by the door is where the water finally surfaced, not where it entered or how far it spread. Assessment always starts by finding the real boundary of the damage, because repairing to the edge of the visible stain guarantees the job has to be done again.',
-        ],
-      },
-      {
-        heading: 'When it is worth repairing',
-        paragraphs: [
-          'Not every water-damaged RV is worth rebuilding, and you deserve a straight answer on that before spending money. A contained soft spot in a floor or a single rotted wall section on an otherwise sound rig is usually well worth repairing. Rot that has traveled the full length of a sidewall and into the frame on a rig with other significant problems often is not.',
-          'The assessment comes first and the pricing is given up front. If the honest recommendation is that the repair costs more than the rig is worth, that is what you will hear.',
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'Can RV floor and wall rot be repaired on site?',
-        answer:
-          'Yes, most of it. Floor sections, wall framing, and paneling are all repairable wherever the RV is parked. The work takes longer than a typical service call, so it gets scheduled as a multi-visit job when the scope calls for it.',
-      },
-      {
-        question: 'How do I know how bad the damage is?',
-        answer:
-          'It has to be probed and measured rather than guessed at. Moisture readings and physical probing map the actual boundary, which is routinely well beyond the visible stain or soft spot.',
-      },
-      {
-        question: 'Is delamination on my sidewall fixable?',
-        answer:
-          'Sometimes. If the panel is intact and the separation is limited, it can often be repaired. Widespread delamination with rotted framing behind it is a much larger job and sometimes not economical, and you will get told which situation you have.',
-      },
-      {
-        question: 'Will you fix the leak that caused it?',
-        answer:
-          'Always, and first. Any rebuild done while the source is still active is wasted work, so the roof, window, seam, or plumbing fault responsible gets repaired before reconstruction begins.',
-      },
-    ],
-    related: ['rv-roof-repair', 'rv-plumbing-repair'],
   },
 
   {
@@ -772,7 +680,7 @@ export const services: Service[] = [
           'Yes. Diagnosis, adjustment, seal replacement, motor and gear work, and hydraulic repairs are all done wherever the RV is parked, provided there is room to run the slide through its travel.',
       },
     ],
-    related: ['rv-awning-repair', 'rv-water-damage-repair'],
+    related: ['rv-awning-repair', 'rv-preventive-maintenance'],
   },
 
   {

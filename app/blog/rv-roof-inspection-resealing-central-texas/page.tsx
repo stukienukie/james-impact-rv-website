@@ -41,7 +41,7 @@ const blogPostingJsonLd = {
   dateModified: '2026-06-16',
   author: {
     '@type': 'Person',
-    name: 'James Langston',
+    name: 'James',
   },
   publisher: {
     '@type': 'Organization',
@@ -53,7 +53,7 @@ const blogPostingJsonLd = {
     '@id': 'https://www.impactrvrepair.com/blog/rv-roof-inspection-resealing-central-texas',
   },
   keywords:
-    'rv roof repair, rv roof resealing, rv roof leak, rv water damage repair, mobile rv repair kyle tx, rv repair near me, rv repair austin, rv repair san marcos, rv roof sealant texas',
+    'rv roof repair, rv roof resealing, rv roof leak, mobile rv repair kyle tx, rv repair near me, rv repair austin, rv repair san marcos, rv roof sealant texas',
   articleSection: 'Roof & Sealants',
 }
 
@@ -415,7 +415,7 @@ export default function RvRoofResealArticle() {
                     href="/service-area"
                     className="text-primary font-semibold hover:underline underline-offset-2"
                   >
-                    Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop,
+                    Buda, Austin, San Marcos, New Braunfels, Canyon Lake,
                     Dripping Springs, and Wimberley
                   </Link>
                   .
@@ -490,7 +490,7 @@ export default function RvRoofResealArticle() {
               {/* Service footer */}
               <p className="text-sm text-muted-foreground border-t border-border pt-6">
                 Serving Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon
-                Lake, Bastrop, and Central Texas within 50 miles of Kyle with
+                Lake, and Central Texas within 50 miles of Kyle with
                 on-site RV repair and maintenance. Mon–Sat, 8am–6pm ·
                 512-968-5258
               </p>

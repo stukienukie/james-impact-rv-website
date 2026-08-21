@@ -13,7 +13,7 @@ import { SITE_URL, breadcrumbJsonLd } from '@/lib/business'
 export const metadata: Metadata = {
   title: 'Mobile RV Repair Service Area — Kyle TX & 50 Miles Around | Impact RV Repair',
   description:
-    'Impact RV Repair serves Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop, Dripping Springs, Wimberley and the surrounding Central Texas region. Call 512-968-5258.',
+    'Impact RV Repair serves Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Dripping Springs, Wimberley and the surrounding Central Texas region. Call 512-968-5258.',
   alternates: {
     canonical: `${SITE_URL}/service-area`,
   },
@@ -105,7 +105,7 @@ export default function ServiceAreaPage() {
 
                 <div className="prose prose-sm max-w-none text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    James Langston is a mobile RV technician based in Kyle, Texas serving
+                    James is a mobile RV technician based in Kyle, Texas serving
                     customers across a 50-mile radius throughout Hays County and Central Texas.
                     Whether you need mobile RV repair in Buda TX, RV roof repair in San Marcos TX,
                     RV AC repair near New Braunfels, or a trusted RV technician anywhere in

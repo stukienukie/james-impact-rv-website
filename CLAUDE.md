@@ -7,7 +7,7 @@
 - Deployed via: Vercel (project: impact-rv-repair-website)
 
 ## Client
-- James Langston — solo RV technician
+- James — solo RV technician
 - Phone: 512-968-5258
 - Email: james@impactrvrepair.com
 - Base: Kyle, TX | Service radius: 50 miles

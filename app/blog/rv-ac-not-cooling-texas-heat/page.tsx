@@ -29,7 +29,7 @@ const blogPostingJsonLd = {
   dateModified: '2026-05-29',
   author: {
     '@type': 'Person',
-    name: 'James Langston',
+    name: 'James',
   },
   publisher: {
     '@type': 'Organization',
@@ -167,14 +167,14 @@ export default function RvAcArticle() {
                   On-Site RV AC Repair — We Come to You
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  At Impact RV Repair, we provide mobile RV air conditioning repair throughout Kyle, TX and 50 miles around — including Buda, Austin, San Marcos, New Braunfels, Canyon Lake, and Bastrop. That means no towing your rig to a shop and no waiting weeks for a dealership slot — we diagnose and fix the problem where your RV is parked, whether that's your driveway, a campground, or a storage lot.{' '}
+                  At Impact RV Repair, we provide mobile RV air conditioning repair throughout Kyle, TX and 50 miles around — including Buda, Austin, San Marcos, New Braunfels, and Canyon Lake. That means no towing your rig to a shop and no waiting weeks for a dealership slot — we diagnose and fix the problem where your RV is parked, whether that's your driveway, a campground, or a storage lot.{' '}
                   <Link href="/service-area" className="text-primary hover:underline font-medium">
                     See our full service area
                   </Link>
                   .
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Owner James Langston brings 12 years of hands-on RV experience, including dealership work, to every call. We've built our reputation on fast, honest, affordable service: we find the root cause, explain what's actually wrong, and get you back to cool air quickly. Emergency calls are always first in line. For full-time RVers especially, that fast turnaround isn't a luxury — it's the difference between enjoying your summer and sweating through it.
+                  Owner James brings 12 years of hands-on RV experience, including dealership work, to every call. We've built our reputation on fast, honest, affordable service: we find the root cause, explain what's actually wrong, and get you back to cool air quickly. Emergency calls are always first in line. For full-time RVers especially, that fast turnaround isn't a luxury — it's the difference between enjoying your summer and sweating through it.
                 </p>
               </section>
 
@@ -232,7 +232,7 @@ export default function RvAcArticle() {
 
               {/* Service footer */}
               <p className="text-sm text-muted-foreground border-t border-border pt-6">
-                Serving Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop, and Central Texas within 50 miles of Kyle with on-site RV repair and maintenance. Mon–Sat, 8am–6pm · 512-968-5258
+                Serving Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon Lake, and Central Texas within 50 miles of Kyle with on-site RV repair and maintenance. Mon–Sat, 8am–6pm · 512-968-5258
               </p>
             </div>
 

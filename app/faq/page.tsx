@@ -35,7 +35,7 @@ const faqItems = [
   {
     question: 'What areas do you serve?',
     answer:
-      'Kyle, Buda, Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, San Marcos, Lakeway, Bastrop, and the surrounding Central Texas region within 50 miles.',
+      'Kyle, Buda, Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, San Marcos, Lakeway, and the surrounding Central Texas region within 50 miles.',
   },
   {
     question: 'How quickly can you respond?',

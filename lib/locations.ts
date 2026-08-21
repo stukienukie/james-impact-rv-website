@@ -46,12 +46,12 @@ export const locations: Location[] = [
     lng: -97.8772,
     metaTitle: 'Mobile RV Repair in Kyle, TX — On-Site Service | Impact RV Repair',
     metaDescription:
-      'Mobile RV repair in Kyle, TX. James Langston brings the shop to your driveway, storage lot, or campsite — AC, roof, electrical, plumbing, and more. Call 512-968-5258.',
+      'Mobile RV repair in Kyle, TX. James brings the shop to your driveway, storage lot, or campsite — AC, roof, electrical, plumbing, and more. Call 512-968-5258.',
     keywords:
       'rv repair kyle tx, mobile rv repair kyle, rv repair near me kyle texas, rv technician kyle tx, rv service hays county',
     cardDescription: 'Home base — same-day service is most achievable here.',
     intro:
-      'Kyle is home base. Impact RV Repair is run out of Kyle by James Langston, a mobile RV technician with 12 years in the trade, and it is the city where scheduling is most flexible and same-day service is most often possible.',
+      'Kyle is home base. Impact RV Repair is run out of Kyle by James, a mobile RV technician with 12 years in the trade, and it is the city where scheduling is most flexible and same-day service is most often possible.',
     localContext: [
       'Kyle has grown fast, and a large share of that growth is families in newer neighborhoods with an RV parked on a side pad, behind a fence, or in a storage lot off the frontage road. Working on rigs in exactly those spots is the entire premise of a mobile operation — there is no dealership drop-off, no waiting weeks for a service bay, and no towing a trailer across town for a repair that takes two hours.',
       'The I-35 corridor through Kyle also means a steady stream of travelers who discover a problem on the road. If you are passing through and something has failed — the A/C quit, a slide will not retract, you have no 12-volt power — being local to Kyle means the response is quick, and travel calls get priority because the clock is genuinely running for you.',
@@ -231,7 +231,6 @@ export const locations: Location[] = [
     ],
     commonJobs: [
       'RV roof repair and resealing, especially on rigs parked under trees',
-      'Water damage and soft floor repair from long-running leaks',
       'A/C repair during summer river season',
       'Slide seal replacement and slide adjustment',
       'Plumbing leaks, pumps, and tank valve repair',
@@ -452,7 +451,6 @@ export const locations: Location[] = [
     commonJobs: [
       'Roof membrane punctures and repairs from overhanging branches',
       'Resealing roofs where debris has been holding moisture on sealant',
-      'Water damage and rot repair on rigs with long-running leaks',
       'A/C and refrigerator vents packed with leaf debris',
       'Electrical and battery faults on rigs parked for long stretches',
       'Full inspections after any flooding event',
@@ -475,171 +473,6 @@ export const locations: Location[] = [
       },
     ],
     nearby: ['san-marcos-tx', 'dripping-springs-tx', 'canyon-lake-tx'],
-  },
-
-  {
-    slug: 'bastrop-tx',
-    city: 'Bastrop',
-    county: 'Bastrop County',
-    distanceMiles: 35,
-    lat: 30.1105,
-    lng: -97.3153,
-    metaTitle: 'Mobile RV Repair in Bastrop, TX — On-Site Service | Impact RV Repair',
-    metaDescription:
-      'Mobile RV repair in Bastrop, TX. On-site AC, roof, electrical, plumbing and appliance repair at state parks, lake sites, and driveways. Call 512-968-5258.',
-    keywords:
-      'rv repair bastrop tx, mobile rv repair bastrop, rv technician bastrop county, rv repair bastrop state park, rv service lake bastrop',
-    cardDescription: 'State park and lake camping east on SH 71.',
-    intro:
-      'Bastrop is roughly thirty-five miles east of Kyle on SH 71. Impact RV Repair services rigs at Bastrop-area campgrounds, state park sites, lake properties, and residential driveways.',
-    localContext: [
-      'Bastrop is genuine camping country. Bastrop State Park and Buescher State Park, the LCRA parks at Lake Bastrop, and the sites along the Colorado River keep RVs in the area year-round rather than just in summer. Campground calls here are routine, and being able to fix something on site means a weekend does not get written off.',
-      'Two things drive the repair pattern. The first is heat and sun, same as everywhere in Central Texas — A/C failures and roof sealant degradation lead the list. The second is that the piney woods and river bottom sites put rigs under tree cover, with the same membrane damage and debris problems that come with it.',
-      'Bastrop also has a good number of full-time and long-term residents in rigs on private property, and those units need real maintenance rather than occasional attention. Water systems, electrical, and appliances all wear faster in continuous use than in weekend use, and the maintenance schedule should reflect that.',
-    ],
-    whereWeWork: [
-      'Bastrop State Park and Buescher State Park campsites',
-      'LCRA park sites at Lake Bastrop, north and south shore',
-      'Private RV parks and long-term sites around Bastrop',
-      'Residential driveways and Tahitian Village properties',
-      'Rural acreage along SH 71, SH 21, and the Colorado River',
-    ],
-    commonJobs: [
-      'A/C repair for campers and full-time residents',
-      'Roof membrane repair and resealing under tree cover',
-      'Plumbing, pump, and tank valve repair on continuously used rigs',
-      'Refrigerator and furnace repair',
-      'Electrical and battery system faults',
-      'Slide-out and awning repair after storms',
-    ],
-    faqs: [
-      {
-        question: 'Do you come out to Bastrop State Park or Lake Bastrop?',
-        answer:
-          'Yes. State park sites, LCRA park sites at the lake, and private campgrounds around Bastrop are all regular calls. Access to the rig and room to work is all that is required.',
-      },
-      {
-        question: 'Is Bastrop inside your service area?',
-        answer:
-          'Yes. It is about thirty-five miles east of Kyle on SH 71, inside the 50-mile radius. You hear back instantly and most jobs are booked within 24 hours.',
-      },
-      {
-        question: 'I live in my RV full time near Bastrop. Do you handle ongoing maintenance?',
-        answer:
-          'Yes, and full-time rigs genuinely need it. Water systems, electrical, and appliances all wear considerably faster in continuous use, so an annual service schedule catches problems well before they strand you.',
-      },
-    ],
-    nearby: ['elgin-tx', 'austin-tx', 'niederwald-tx'],
-  },
-
-  {
-    slug: 'elgin-tx',
-    city: 'Elgin',
-    county: 'Bastrop County',
-    distanceMiles: 40,
-    lat: 30.3496,
-    lng: -97.3703,
-    metaTitle: 'Mobile RV Repair in Elgin, TX — On-Site Service | Impact RV Repair',
-    metaDescription:
-      'Mobile RV repair in Elgin, TX. On-site AC, roof, electrical, plumbing and appliance service at rural properties and driveways. Call 512-968-5258.',
-    keywords:
-      'rv repair elgin tx, mobile rv repair elgin, rv technician bastrop county, rv service elgin texas, rv repair near me elgin',
-    cardDescription: 'Rural properties northeast along US 290.',
-    intro:
-      'Elgin is about forty miles northeast of Kyle out US 290. Impact RV Repair services RVs at Elgin homes, rural acreage, and properties throughout the surrounding area.',
-    localContext: [
-      'Elgin is largely rural, and RVs here are usually parked on private property — beside a house, under a cover, or out on acreage. There is comparatively little commercial RV storage, which means most service happens exactly where the rig lives. That suits mobile work well.',
-      'A recurring pattern in this part of the service area is rigs that sit for long stretches between uses. Rodents find their way into wiring, furnace ductwork, and storage bays; batteries discharge and sulfate; seals dry out; and tires age out well before they wear out. None of that shows up until the rig is put back into service, usually right before a trip.',
-      'The practical answer is a wake-up service before the season rather than a scramble the week of departure. A proper check of batteries, propane, water systems, tires, and roof sealant catches the problems while there is still time to fix them.',
-    ],
-    whereWeWork: [
-      'Rural acreage and private property throughout the Elgin area',
-      'Residential driveways and covered parking in and around town',
-      'Properties along US 290, SH 95, and toward McDade',
-      'Farm and ranch sites where rigs are stored on the property',
-      'Storage lots in the Elgin and Bastrop County area',
-    ],
-    commonJobs: [
-      'Wake-up service on rigs that have sat for months',
-      'Rodent damage to wiring, ductwork, and furnace intakes',
-      'Battery and charging system replacement',
-      'Roof resealing on rigs stored outdoors year-round',
-      'Water system repair and de-winterization',
-      'Tire age assessment and pre-trip inspections',
-    ],
-    faqs: [
-      {
-        question: 'Is Elgin within your service radius?',
-        answer:
-          'Yes. It is roughly forty miles northeast of Kyle, inside the 50-mile radius. It sits toward the outer edge, so flexible timing on routine work helps, but urgent calls are still scheduled quickly.',
-      },
-      {
-        question: 'My RV has been parked for a year. What should I expect?',
-        answer:
-          'Typically batteries that will not hold charge, dried-out seals, possible rodent damage in the wiring or furnace ductwork, and roof sealant that has degraded. A wake-up inspection catches all of it before a trip rather than during one.',
-      },
-      {
-        question: 'Do you service RVs parked on private acreage?',
-        answer:
-          'Yes, and around Elgin that is most of the work. Only access to the rig and space to work are needed.',
-      },
-    ],
-    nearby: ['bastrop-tx', 'taylor-tx', 'austin-tx'],
-  },
-
-  {
-    slug: 'taylor-tx',
-    city: 'Taylor',
-    county: 'Williamson County',
-    distanceMiles: 50,
-    lat: 30.571,
-    lng: -97.4092,
-    metaTitle: 'Mobile RV Repair in Taylor, TX — On-Site Service | Impact RV Repair',
-    metaDescription:
-      'Mobile RV repair in Taylor, TX. On-site AC, roof, electrical, plumbing and appliance service at driveways, work sites, and rural properties. Call 512-968-5258.',
-    keywords:
-      'rv repair taylor tx, mobile rv repair taylor, rv technician williamson county, rv service taylor texas, rv repair near me taylor',
-    cardDescription: 'Outer edge of the radius, northeast on US 79.',
-    intro:
-      'Taylor sits at the outer edge of the 50-mile service radius, about fifty miles northeast of Kyle. Impact RV Repair does travel out to Taylor for on-site work — it just takes a little more scheduling flexibility than the closer cities.',
-    localContext: [
-      'Taylor has changed quickly with the industrial growth in eastern Williamson County, and one visible result is more RVs in the area being used as work housing rather than for recreation. A rig lived in during the week is on a completely different maintenance curve than one used a few weekends a year — water systems, electrical, and appliances all see heavy continuous duty.',
-      'For rigs in that kind of service, the failures that matter are the ones that make the unit uninhabitable: A/C in the summer, furnace in the winter, water heater and pump year-round. Those get treated as priority calls because there is nowhere else to sleep when they quit.',
-      'Because Taylor is at the far edge of the radius, trips out that way are grouped where possible. Urgent problems are still handled promptly; for routine maintenance and inspections, a little flexibility on timing helps get you scheduled sooner.',
-    ],
-    whereWeWork: [
-      'Residential driveways and side pads throughout Taylor',
-      'Work and job sites where rigs are used as housing',
-      'Rural acreage along US 79, SH 95, and FM 619',
-      'Storage lots in and around the Taylor area',
-      'Campsites and short-term sites in eastern Williamson County',
-    ],
-    commonJobs: [
-      'A/C repair for rigs being lived in year-round',
-      'Furnace repair ahead of winter',
-      'Water heater, pump, and plumbing repair on heavy-use systems',
-      'Electrical faults and shore power connection problems',
-      'Roof resealing on rigs parked outdoors permanently',
-      'Full maintenance service for continuously occupied units',
-    ],
-    faqs: [
-      {
-        question: 'Do you really cover Taylor?',
-        answer:
-          'Yes, at about fifty miles it is right at the edge of the service radius. Trips that direction get grouped where possible, so routine work benefits from flexible timing. Urgent problems are still handled promptly.',
-      },
-      {
-        question: 'I am living in my RV in Taylor for work. Do you handle that?',
-        answer:
-          'Yes, and full-time rigs are a meaningful share of the work in this area. Continuous use wears water systems, electrical, and appliances much faster, and failures that make a rig uninhabitable are treated as priority calls.',
-      },
-      {
-        question: 'Can you service my RV at a work site?',
-        answer:
-          'Yes, provided there is access to the rig and enough room to work safely. Job site and work housing calls are routine.',
-      },
-    ],
-    nearby: ['elgin-tx', 'bastrop-tx', 'austin-tx'],
   },
 
   {

@@ -15,7 +15,7 @@ export const BUSINESS = {
   phoneHref: 'tel:512-968-5258',
   telephone: '+15129685258',
   email: 'james@impactrvrepair.com',
-  owner: 'James Langston',
+  owner: 'James',
   baseCity: 'Kyle',
   radiusMiles: 50,
   hours: 'Mo-Sa 08:00-18:00',

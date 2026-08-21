@@ -18,10 +18,7 @@ const CITIES = [
   { name: 'San Marcos', lat: 29.8833, lng: -97.9414 },
   { name: 'New Braunfels', lat: 29.703, lng: -98.1245 },
   { name: 'Canyon Lake', lat: 29.8752, lng: -98.2622 },
-  { name: 'Bastrop', lat: 30.1105, lng: -97.3153 },
   { name: 'Dripping Springs', lat: 30.1902, lng: -98.0867 },
-  { name: 'Taylor', lat: 30.571, lng: -97.4092 },
-  { name: 'Elgin', lat: 30.3496, lng: -97.3703 },
   { name: 'Wimberley', lat: 29.9974, lng: -98.0989 },
   { name: 'Niederwald', lat: 29.9738, lng: -97.7264 },
   { name: 'Uhland', lat: 29.966, lng: -97.7767 },
@@ -108,7 +105,7 @@ export function ServiceAreaMap() {
       <div
         ref={containerRef}
         role="img"
-        aria-label="Map of the Impact RV Repair service area — a 50 mile radius around Kyle, Texas, covering Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Bastrop, Dripping Springs, Taylor, Elgin, Wimberley, Niederwald, and Uhland."
+        aria-label="Map of the Impact RV Repair service area — a 50 mile radius around Kyle, Texas, covering Buda, Austin, San Marcos, New Braunfels, Canyon Lake, Dripping Springs, Wimberley, Niederwald, and Uhland."
         className="aspect-[4/3] w-full bg-muted [&_.leaflet-container]:font-sans"
       />
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-border bg-card px-4 py-3 text-xs text-muted-foreground">

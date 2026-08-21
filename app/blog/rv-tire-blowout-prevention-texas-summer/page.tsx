@@ -45,7 +45,7 @@ const blogPostingJsonLd = {
   dateModified: '2026-07-14',
   author: {
     '@type': 'Person',
-    name: 'James Langston',
+    name: 'James',
   },
   publisher: {
     '@type': 'Organization',
@@ -421,7 +421,7 @@ export default function RvTireBlowoutArticle() {
                     className="text-primary font-semibold hover:underline underline-offset-2"
                   >
                     Buda, Austin, San Marcos, New Braunfels, Canyon Lake,
-                    Bastrop, Dripping Springs, and Wimberley
+                    Dripping Springs, and Wimberley
                   </Link>
                   .
                 </p>
@@ -495,7 +495,7 @@ export default function RvTireBlowoutArticle() {
               {/* Service footer */}
               <p className="text-sm text-muted-foreground border-t border-border pt-6">
                 Serving Kyle, Buda, Austin, San Marcos, New Braunfels, Canyon
-                Lake, Bastrop, and Central Texas within 50 miles of Kyle with
+                Lake, and Central Texas within 50 miles of Kyle with
                 on-site RV repair and maintenance. Mon–Sat, 8am–6pm ·
                 512-968-5258
               </p>

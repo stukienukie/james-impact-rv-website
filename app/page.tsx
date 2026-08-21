@@ -71,11 +71,8 @@ const localBusinessJsonLd = {
     { '@type': 'City', name: 'San Marcos', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'New Braunfels', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'Canyon Lake', containedInPlace: { '@type': 'State', name: 'Texas' } },
-    { '@type': 'City', name: 'Bastrop', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'Dripping Springs', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'Wimberley', containedInPlace: { '@type': 'State', name: 'Texas' } },
-    { '@type': 'City', name: 'Taylor', containedInPlace: { '@type': 'State', name: 'Texas' } },
-    { '@type': 'City', name: 'Elgin', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'Niederwald', containedInPlace: { '@type': 'State', name: 'Texas' } },
     { '@type': 'City', name: 'Uhland', containedInPlace: { '@type': 'State', name: 'Texas' } },
   ],
@@ -89,7 +86,6 @@ const localBusinessJsonLd = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Slide-Out Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Electrical Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Plumbing Repair' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Water Damage & Rot Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Leveling Jack Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Appliance Repair' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'RV Winterization' } },
@@ -98,7 +94,7 @@ const localBusinessJsonLd = {
   },
   founder: {
     '@type': 'Person',
-    name: 'James Langston',
+    name: 'James',
     jobTitle: 'Mobile RV Technician',
   },
   priceRange: '$$',
@@ -231,7 +227,7 @@ export default function HomePage() {
                 </h2>
                 <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    James Langston, owner of IMPACT RV Repair, is a mobile RV technician
+                    James, owner of IMPACT RV Repair, is a mobile RV technician
                     based in Kyle, Texas. With 12 years of hands-on experience — including dealership work — he comes
                     to your campsite, driveway, or storage lot — no hauling your rig to
                     a dealership.
